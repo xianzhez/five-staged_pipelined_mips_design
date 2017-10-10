@@ -1,0 +1,20 @@
+Release 9.2i - netgen J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim MipsPipelineCPU_Vga.ngc MipsPipelineCPU_Vga_synthesis.v  
+
+Reading design 'MipsPipelineCPU_Vga.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'E:\31101008121220\lab28\PipelineCPU_VGA\netgen\synthesis\MipsPipelineCPU_Vga_sy
+nthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 58764 kilobytes

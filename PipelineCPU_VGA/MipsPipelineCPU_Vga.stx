@@ -1,0 +1,80 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.13 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../PipelineCPU/SRC/full_adder.v" in library work
+Compiling verilog file "../PipelineCPU/SRC/adder_4bits.v" in library work
+Module <full_adder> compiled
+Compiling verilog file "../PipelineCPU/SRC/mux_adder.v" in library work
+Module <adder_4bits> compiled
+Compiling verilog file "dff_lib.v" in library work
+Module <mux_adder> compiled
+Module <d_ff> compiled
+Module <d_ff_r> compiled
+Compiling verilog file "../PipelineCPU/SRC/adder_32bits.v" in library work
+Module <d_ff_re> compiled
+Compiling verilog file "one_pulse.v" in library work
+Module <adder_32bits> compiled
+Compiling verilog file "div_N.v" in library work
+Module <one_pulse> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <div_N> compiled
+Compiling verilog file "brute_force_synchronizer.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "../PipelineCPU/SRC/ff_lib.v" in library work
+Module <brute_force_synchronizer> compiled
+Module <dff> compiled
+Module <dffr> compiled
+Compiling verilog file "../PipelineCPU/SRC/Zero_test.v" in library work
+Module <dffre> compiled
+Compiling verilog file "../PipelineCPU/SRC/RsSel_RtSel.v" in library work
+Module <Zero_test> compiled
+Compiling verilog file "../PipelineCPU/SRC/Registers.v" in library work
+Module <RsSel_RtSel> compiled
+Compiling verilog file "../PipelineCPU/SRC/InstructionROM.v" in library work
+Module <Registers> compiled
+Compiling verilog file "../PipelineCPU/SRC/Hazard_detector.v" in library work
+Module <InstructionROM> compiled
+Compiling verilog file "../PipelineCPU/SRC/Decode.v" in library work
+Module <Hazard_detector> compiled
+Compiling verilog file "../PipelineCPU/SRC/ALU.v" in library work
+Module <Decode> compiled
+Compiling verilog file "button_press_unit.v" in library work
+Module <ALU> compiled
+Compiling verilog file "../PipelineCPU/SRC/IF.v" in library work
+Module <button_press_unit> compiled
+Compiling verilog file "../PipelineCPU/SRC/ID.v" in library work
+Module <IF> compiled
+Compiling verilog file "../PipelineCPU/SRC/EX.v" in library work
+Module <ID> compiled
+Compiling verilog file "../PipelineCPU/SRC/DataRAM.v" in library work
+Module <EX> compiled
+Compiling verilog file "svga_ctrl.v" in library work
+Module <DataRAM> compiled
+Compiling verilog file "disp_ctrl.v" in library work
+Module <svga_ctrl> compiled
+Compiling verilog file "CLKgen.v" in library work
+Module <disp_ctrl> compiled
+Compiling verilog file "../PipelineCPU/SRC/MipsPipelineCPU.v" in library work
+Module <CLKgen> compiled
+Compiling verilog file "MipsPipelineCPU_Vga.v" in library work
+Module <MipsPipelineCPU> compiled
+Module <MipsPipelineCPU_Vga> compiled
+No errors in compilation
+Analysis of file <"MipsPipelineCPU_Vga.prj"> succeeded.
+ 
+CPU : 0.06 / 0.19 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+
+Total memory usage is 113468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

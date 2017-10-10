@@ -1,0 +1,1757 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: MipsPipelineCPU_Vga.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MipsPipelineCPU_Vga.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MipsPipelineCPU_Vga"
+Output Format                      : NGC
+Target Device                      : xc2vp30-7-ff896
+
+---- Source Options
+Top Module Name                    : MipsPipelineCPU_Vga
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : MipsPipelineCPU_Vga.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../PipelineCPU/SRC/full_adder.v" in library work
+Compiling verilog file "../PipelineCPU/SRC/adder_4bits.v" in library work
+Module <full_adder> compiled
+Compiling verilog file "../PipelineCPU/SRC/mux_adder.v" in library work
+Module <adder_4bits> compiled
+Compiling verilog file "dff_lib.v" in library work
+Module <mux_adder> compiled
+Module <d_ff> compiled
+Module <d_ff_r> compiled
+Compiling verilog file "../PipelineCPU/SRC/adder_32bits.v" in library work
+Module <d_ff_re> compiled
+Compiling verilog file "one_pulse.v" in library work
+Module <adder_32bits> compiled
+Compiling verilog file "div_N.v" in library work
+Module <one_pulse> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <div_N> compiled
+Compiling verilog file "brute_force_synchronizer.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "../PipelineCPU/SRC/ff_lib.v" in library work
+Module <brute_force_synchronizer> compiled
+Module <dff> compiled
+Module <dffr> compiled
+Compiling verilog file "../PipelineCPU/SRC/Zero_test.v" in library work
+Module <dffre> compiled
+Compiling verilog file "../PipelineCPU/SRC/RsSel_RtSel.v" in library work
+Module <Zero_test> compiled
+Compiling verilog file "../PipelineCPU/SRC/Registers.v" in library work
+Module <RsSel_RtSel> compiled
+Compiling verilog file "../PipelineCPU/SRC/InstructionROM.v" in library work
+Module <Registers> compiled
+Compiling verilog file "../PipelineCPU/SRC/Hazard_detector.v" in library work
+Module <InstructionROM> compiled
+Compiling verilog file "../PipelineCPU/SRC/Decode.v" in library work
+Module <Hazard_detector> compiled
+Compiling verilog file "../PipelineCPU/SRC/ALU.v" in library work
+Module <Decode> compiled
+Compiling verilog file "button_press_unit.v" in library work
+Module <ALU> compiled
+Compiling verilog file "./DisplayROM.v" in library work
+Module <button_press_unit> compiled
+Compiling verilog file "./DataRAM.v" in library work
+Module <DisplayROM> compiled
+Compiling verilog file "../PipelineCPU/SRC/IF.v" in library work
+Module <DataRAM> compiled
+Compiling verilog file "../PipelineCPU/SRC/ID.v" in library work
+Module <IF> compiled
+Compiling verilog file "../PipelineCPU/SRC/EX.v" in library work
+Module <ID> compiled
+Compiling verilog file "svga_ctrl.v" in library work
+Module <EX> compiled
+Compiling verilog file "disp_ctrl.v" in library work
+Module <svga_ctrl> compiled
+Compiling verilog file "CLKgen.v" in library work
+Module <disp_ctrl> compiled
+Compiling verilog file "../PipelineCPU/SRC/MipsPipelineCPU.v" in library work
+Module <CLKgen> compiled
+Compiling verilog file "MipsPipelineCPU_Vga.v" in library work
+Module <MipsPipelineCPU> compiled
+Module <MipsPipelineCPU_Vga> compiled
+No errors in compilation
+Analysis of file <"MipsPipelineCPU_Vga.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <MipsPipelineCPU_Vga> in library <work>.
+
+Analyzing hierarchy for module <CLKgen> in library <work>.
+
+Analyzing hierarchy for module <MipsPipelineCPU> in library <work>.
+
+Analyzing hierarchy for module <svga_ctrl> in library <work> with parameters.
+	H_ACTIVE_PIXEL = "01100100000"
+	H_BP_PIXEL = "00010101000"
+	H_FP_PIXEL = "00000010000"
+	H_SYNC_WIDTH = "00001010000"
+	H_TOTAL_PIXEL = "10000101000"
+	V_ACTIVE_LINE = "1001011000"
+	V_BP_LINE = "0000010111"
+	V_FP_LINE = "0000000001"
+	V_SYNC_WIDTH = "0000000010"
+	V_TOTAL_LINE = "1001110010"
+
+Analyzing hierarchy for module <disp_ctrl> in library <work>.
+
+Analyzing hierarchy for module <button_press_unit> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <IF> in library <work>.
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <ID> in library <work> with parameters.
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <EX> in library <work>.
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <div_N> in library <work> with parameters.
+	n = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <brute_force_synchronizer> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <one_pulse> in library <work>.
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <InstructionROM> in library <work>.
+
+Analyzing hierarchy for module <Zero_test> in library <work> with parameters.
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+
+Analyzing hierarchy for module <Hazard_detector> in library <work>.
+
+Analyzing hierarchy for module <Decode> in library <work> with parameters.
+	ADDIU_op = "001001"
+	ADDI_op = "001000"
+	ADDU_funct = "100001"
+	ADD_funct = "100000"
+	ANDI_op = "001100"
+	AND_funct = "100100"
+	BEQ_op = "000100"
+	BGEZ_op = "000001"
+	BGEZ_rt = "00001"
+	BGTZ_op = "000111"
+	BGTZ_rt = "00000"
+	BLEZ_op = "000110"
+	BLEZ_rt = "00000"
+	BLTZ_op = "000001"
+	BLTZ_rt = "00000"
+	BNE_op = "000101"
+	JR_funct = "001000"
+	J_op = "000010"
+	LW_op = "100011"
+	NOR_funct = "100111"
+	ORI_op = "001101"
+	OR_funct = "100101"
+	R_type_op = "000000"
+	SLLV_funct = "000100"
+	SLL_funct = "000000"
+	SLTIU_op = "001011"
+	SLTI_op = "001010"
+	SLTU_funct = "101011"
+	SLT_funct = "101010"
+	SRAV_funct = "000111"
+	SRA_funct = "000011"
+	SRLV_funct = "000110"
+	SRL_funct = "000010"
+	SUBU_funct = "100011"
+	SUB_funct = "100010"
+	SW_op = "101011"
+	XORI_op = "001110"
+	XOR_funct = "100110"
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <Registers> in library <work>.
+
+Analyzing hierarchy for module <RsSel_RtSel> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work> with parameters.
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <d_ff> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <d_ff_re> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <d_ff_re> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <d_ff_r> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <MipsPipelineCPU_Vga>.
+Module <MipsPipelineCPU_Vga> is correct for synthesis.
+ 
+Analyzing module <CLKgen> in library <work>.
+Module <CLKgen> is correct for synthesis.
+ 
+Analyzing module <button_press_unit> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000010010
+Module <button_press_unit> is correct for synthesis.
+ 
+Analyzing module <div_N> in library <work>.
+	n = 32'sb00000000000000000000000000010010
+Module <div_N> is correct for synthesis.
+ 
+Analyzing module <brute_force_synchronizer> in library <work>.
+Module <brute_force_synchronizer> is correct for synthesis.
+ 
+Analyzing module <d_ff> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <d_ff> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000011
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <d_ff_re.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000011
+Module <d_ff_re.1> is correct for synthesis.
+ 
+Analyzing module <d_ff_re.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <d_ff_re.2> is correct for synthesis.
+ 
+Analyzing module <one_pulse> in library <work>.
+Module <one_pulse> is correct for synthesis.
+ 
+Analyzing module <d_ff_r> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <d_ff_r> is correct for synthesis.
+ 
+Analyzing module <MipsPipelineCPU> in library <work>.
+Module <MipsPipelineCPU> is correct for synthesis.
+ 
+Analyzing module <IF> in library <work>.
+Module <IF> is correct for synthesis.
+ 
+Analyzing module <adder_32bits> in library <work>.
+Module <adder_32bits> is correct for synthesis.
+ 
+Analyzing module <adder_4bits> in library <work>.
+Module <adder_4bits> is correct for synthesis.
+ 
+Analyzing module <full_adder> in library <work>.
+Module <full_adder> is correct for synthesis.
+ 
+Analyzing module <mux_adder> in library <work>.
+Module <mux_adder> is correct for synthesis.
+ 
+Analyzing module <InstructionROM> in library <work>.
+Module <InstructionROM> is correct for synthesis.
+ 
+Analyzing module <dffre> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000100000
+Module <dffre> is correct for synthesis.
+ 
+Analyzing module <ID> in library <work>.
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+Module <ID> is correct for synthesis.
+ 
+Analyzing module <Zero_test> in library <work>.
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+Module <Zero_test> is correct for synthesis.
+ 
+Analyzing module <Hazard_detector> in library <work>.
+Module <Hazard_detector> is correct for synthesis.
+ 
+Analyzing module <Decode> in library <work>.
+	ADDIU_op = 6'b001001
+	ADDI_op = 6'b001000
+	ADDU_funct = 6'b100001
+	ADD_funct = 6'b100000
+	ANDI_op = 6'b001100
+	AND_funct = 6'b100100
+	BEQ_op = 6'b000100
+	BGEZ_op = 6'b000001
+	BGEZ_rt = 5'b00001
+	BGTZ_op = 6'b000111
+	BGTZ_rt = 5'b00000
+	BLEZ_op = 6'b000110
+	BLEZ_rt = 5'b00000
+	BLTZ_op = 6'b000001
+	BLTZ_rt = 5'b00000
+	BNE_op = 6'b000101
+	JR_funct = 6'b001000
+	J_op = 6'b000010
+	LW_op = 6'b100011
+	NOR_funct = 6'b100111
+	ORI_op = 6'b001101
+	OR_funct = 6'b100101
+	R_type_op = 6'b000000
+	SLLV_funct = 6'b000100
+	SLL_funct = 6'b000000
+	SLTIU_op = 6'b001011
+	SLTI_op = 6'b001010
+	SLTU_funct = 6'b101011
+	SLT_funct = 6'b101010
+	SRAV_funct = 6'b000111
+	SRA_funct = 6'b000011
+	SRLV_funct = 6'b000110
+	SRL_funct = 6'b000010
+	SUBU_funct = 6'b100011
+	SUB_funct = 6'b100010
+	SW_op = 6'b101011
+	XORI_op = 6'b001110
+	XOR_funct = 6'b100110
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+WARNING:Xst:883 - "../PipelineCPU/SRC/Decode.v" line 262: Ignored duplicate item in case statement. 
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 264: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 265: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 269: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 270: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 271: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../PipelineCPU/SRC/Decode.v" line 272: Size mismatch between case item and case selector.
+Module <Decode> is correct for synthesis.
+ 
+Analyzing module <Registers> in library <work>.
+Module <Registers> is correct for synthesis.
+ 
+Analyzing module <RsSel_RtSel> in library <work>.
+Module <RsSel_RtSel> is correct for synthesis.
+ 
+Analyzing module <dffr.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffr.1> is correct for synthesis.
+ 
+Analyzing module <dffr.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <dffr.2> is correct for synthesis.
+ 
+Analyzing module <dffr.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000100000
+Module <dffr.3> is correct for synthesis.
+ 
+Analyzing module <dffr.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000101
+Module <dffr.4> is correct for synthesis.
+ 
+Analyzing module <EX> in library <work>.
+Module <EX> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <dffr.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffr.5> is correct for synthesis.
+ 
+Analyzing module <svga_ctrl> in library <work>.
+	H_ACTIVE_PIXEL = 11'b01100100000
+	H_BP_PIXEL = 11'b00010101000
+	H_FP_PIXEL = 11'b00000010000
+	H_SYNC_WIDTH = 11'b00001010000
+	H_TOTAL_PIXEL = 11'b10000101000
+	V_ACTIVE_LINE = 10'b1001011000
+	V_BP_LINE = 10'b0000010111
+	V_FP_LINE = 10'b0000000001
+	V_SYNC_WIDTH = 10'b0000000010
+	V_TOTAL_LINE = 10'b1001110010
+Module <svga_ctrl> is correct for synthesis.
+ 
+Analyzing module <disp_ctrl> in library <work>.
+Module <disp_ctrl> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <svga_ctrl>.
+    Related source file is "svga_ctrl.v".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 10-bit subtractor for signal <y_pos>.
+    Found 1-bit register for signal <data_en_reg>.
+    Found 11-bit comparator greatequal for signal <data_en_reg$cmp_ge0000> created at line 152.
+    Found 10-bit comparator greatequal for signal <data_en_reg$cmp_ge0001> created at line 152.
+    Found 11-bit comparator less for signal <data_en_reg$cmp_lt0000> created at line 152.
+    Found 10-bit comparator less for signal <data_en_reg$cmp_lt0001> created at line 152.
+    Found 1-bit register for signal <hsync_reg>.
+    Found 11-bit comparator greatequal for signal <hsync_reg$cmp_ge0000> created at line 118.
+    Found 10-bit up counter for signal <line_cnt_reg>.
+    Found 11-bit up counter for signal <pixel_cnt_reg>.
+    Found 1-bit register for signal <vsync_reg>.
+    Found 10-bit comparator greatequal for signal <vsync_reg$cmp_ge0000> created at line 141.
+    Found 10-bit subtractor for signal <x_pos_temp>.
+    Found 10-bit subtractor for signal <x_pos_temp$addsub0000> created at line 171.
+    Found 10-bit subtractor for signal <y_pos$addsub0000> created at line 175.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <svga_ctrl> synthesized.
+
+
+Synthesizing Unit <div_N>.
+    Related source file is "div_N.v".
+    Found 18-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <div_N> synthesized.
+
+
+Synthesizing Unit <d_ff>.
+    Related source file is "dff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <d_ff> synthesized.
+
+
+Synthesizing Unit <d_ff_re_1>.
+    Related source file is "dff_lib.v".
+    Found 3-bit register for signal <q>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <d_ff_re_1> synthesized.
+
+
+Synthesizing Unit <d_ff_re_2>.
+    Related source file is "dff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <d_ff_re_2> synthesized.
+
+
+Synthesizing Unit <d_ff_r>.
+    Related source file is "dff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <d_ff_r> synthesized.
+
+
+Synthesizing Unit <dffre>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <dffre> synthesized.
+
+
+Synthesizing Unit <dffr_1>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffr_1> synthesized.
+
+
+Synthesizing Unit <dffr_2>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <dffr_2> synthesized.
+
+
+Synthesizing Unit <dffr_3>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <dffr_3> synthesized.
+
+
+Synthesizing Unit <dffr_4>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 5-bit register for signal <q>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <dffr_4> synthesized.
+
+
+Synthesizing Unit <dffr_5>.
+    Related source file is "../PipelineCPU/SRC/ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffr_5> synthesized.
+
+
+Synthesizing Unit <InstructionROM>.
+    Related source file is "../PipelineCPU/SRC/InstructionROM.v".
+    Found 16x32-bit ROM for signal <dout$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <InstructionROM> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "../PipelineCPU/SRC/full_adder.v".
+    Found 1-bit xor3 for signal <s>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <Zero_test>.
+    Related source file is "../PipelineCPU/SRC/Zero_test.v".
+    Found 1-bit xor2 for signal <Z$xor0000>.
+    Found 1-bit xor2 for signal <Z$xor0001>.
+    Found 1-bit xor2 for signal <Z$xor0002>.
+    Found 1-bit xor2 for signal <Z$xor0003>.
+    Found 1-bit xor2 for signal <Z$xor0004>.
+    Found 1-bit xor2 for signal <Z$xor0005>.
+    Found 1-bit xor2 for signal <Z$xor0006>.
+    Found 1-bit xor2 for signal <Z$xor0007>.
+    Found 1-bit xor2 for signal <Z$xor0008>.
+    Found 1-bit xor2 for signal <Z$xor0009>.
+    Found 1-bit xor2 for signal <Z$xor0010>.
+    Found 1-bit xor2 for signal <Z$xor0011>.
+    Found 1-bit xor2 for signal <Z$xor0012>.
+    Found 1-bit xor2 for signal <Z$xor0013>.
+    Found 1-bit xor2 for signal <Z$xor0014>.
+    Found 1-bit xor2 for signal <Z$xor0015>.
+    Found 1-bit xor2 for signal <Z$xor0016>.
+    Found 1-bit xor2 for signal <Z$xor0017>.
+    Found 1-bit xor2 for signal <Z$xor0018>.
+    Found 1-bit xor2 for signal <Z$xor0019>.
+    Found 1-bit xor2 for signal <Z$xor0020>.
+    Found 1-bit xor2 for signal <Z$xor0021>.
+    Found 1-bit xor2 for signal <Z$xor0022>.
+    Found 1-bit xor2 for signal <Z$xor0023>.
+    Found 1-bit xor2 for signal <Z$xor0024>.
+    Found 1-bit xor2 for signal <Z$xor0025>.
+    Found 1-bit xor2 for signal <Z$xor0026>.
+    Found 1-bit xor2 for signal <Z$xor0027>.
+    Found 1-bit xor2 for signal <Z$xor0028>.
+    Found 1-bit xor2 for signal <Z$xor0029>.
+    Found 1-bit xor2 for signal <Z$xor0030>.
+    Found 1-bit xor2 for signal <Z$xor0031>.
+Unit <Zero_test> synthesized.
+
+
+Synthesizing Unit <Hazard_detector>.
+    Related source file is "../PipelineCPU/SRC/Hazard_detector.v".
+    Found 5-bit comparator equal for signal <stall$cmp_eq0000> created at line 14.
+    Found 5-bit comparator equal for signal <stall$cmp_eq0001> created at line 14.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <Hazard_detector> synthesized.
+
+
+Synthesizing Unit <Decode>.
+    Related source file is "../PipelineCPU/SRC/Decode.v".
+WARNING:Xst:646 - Signal <Branch> is assigned but never used.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0006>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0007>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0012>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0013>.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <Decode> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "../PipelineCPU/SRC/Registers.v".
+    Found 32x32-bit dual-port RAM <Mram_regs> for signal <regs>.
+    Found 32x32-bit dual-port RAM <Mram_regs_ren> for signal <regs>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <RsSel_RtSel>.
+    Related source file is "../PipelineCPU/SRC/RsSel_RtSel.v".
+    Found 5-bit comparator equal for signal <RsSel$cmp_eq0001> created at line 19.
+    Found 5-bit comparator equal for signal <RtSel$cmp_eq0000> created at line 20.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <RsSel_RtSel> synthesized.
+
+
+Synthesizing Unit <disp_ctrl>.
+    Related source file is "disp_ctrl.v".
+    Found 16x2-bit ROM for signal <$rom0000>.
+    Found 1-bit 8-to-1 multiplexer for signal <char_pixel>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Multiplexer(s).
+Unit <disp_ctrl> synthesized.
+
+
+Synthesizing Unit <brute_force_synchronizer>.
+    Related source file is "brute_force_synchronizer.v".
+WARNING:Xst:1780 - Signal <ff2_out> is never used or assigned.
+Unit <brute_force_synchronizer> synthesized.
+
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 4x2-bit ROM for signal <current_state_q$rom0000>.
+    Found 3-bit adder for signal <$add0000> created at line 18.
+    Found 2-bit 4-to-1 multiplexer for signal <next_state_d>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <one_pulse>.
+    Related source file is "one_pulse.v".
+Unit <one_pulse> synthesized.
+
+
+Synthesizing Unit <adder_4bits>.
+    Related source file is "../PipelineCPU/SRC/adder_4bits.v".
+Unit <adder_4bits> synthesized.
+
+
+Synthesizing Unit <button_press_unit>.
+    Related source file is "button_press_unit.v".
+Unit <button_press_unit> synthesized.
+
+
+Synthesizing Unit <mux_adder>.
+    Related source file is "../PipelineCPU/SRC/mux_adder.v".
+Unit <mux_adder> synthesized.
+
+
+Synthesizing Unit <CLKgen>.
+    Related source file is "CLKgen.v".
+    Found 3-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <CLKgen> synthesized.
+
+
+Synthesizing Unit <adder_32bits>.
+    Related source file is "../PipelineCPU/SRC/adder_32bits.v".
+Unit <adder_32bits> synthesized.
+
+
+Synthesizing Unit <IF>.
+    Related source file is "../PipelineCPU/SRC/IF.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <PC_in>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <IF> synthesized.
+
+
+Synthesizing Unit <ID>.
+    Related source file is "../PipelineCPU/SRC/ID.v".
+Unit <ID> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "../PipelineCPU/SRC/ALU.v".
+WARNING:Xst:646 - Signal <Binvert> is assigned but never used.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit adder for signal <B_adder$addsub0000> created at line 83.
+    Found 1-bit xor2 for signal <overflow$xor0000> created at line 113.
+    Found 32-bit shifter logical left for signal <Result$shift0003> created at line 106.
+    Found 32-bit shifter logical right for signal <Result$shift0004> created at line 107.
+    Found 32-bit shifter arithmetic right for signal <Result$shift0005> created at line 108.
+    Found 1-bit xor2 for signal <Result$xor0000> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0001> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0002> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0003> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0004> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0005> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0006> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0007> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0008> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0009> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0010> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0011> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0012> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0013> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0014> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0015> created at line 103.
+    Found 32-bit xor2 for signal <Result$xor0016> created at line 98.
+    Found 1-bit xor2 for signal <Result$xor0017>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <EX>.
+    Related source file is "../PipelineCPU/SRC/EX.v".
+    Found 32-bit 4-to-1 multiplexer for signal <A>.
+    Found 32-bit 4-to-1 multiplexer for signal <B>.
+    Found 5-bit comparator equal for signal <ForwardA_0$cmp_eq0000> created at line 51.
+    Found 5-bit comparator not equal for signal <ForwardA_0$cmp_ne0001> created at line 51.
+    Found 5-bit comparator equal for signal <ForwardA_1$cmp_eq0000> created at line 55.
+    Found 5-bit comparator equal for signal <ForwardB_0$cmp_eq0000> created at line 57.
+    Found 5-bit comparator not equal for signal <ForwardB_0$cmp_ne0000> created at line 57.
+    Found 5-bit comparator equal for signal <ForwardB_1$cmp_eq0000> created at line 58.
+    Summary:
+	inferred   6 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <EX> synthesized.
+
+
+Synthesizing Unit <MipsPipelineCPU>.
+    Related source file is "../PipelineCPU/SRC/MipsPipelineCPU.v".
+Unit <MipsPipelineCPU> synthesized.
+
+
+Synthesizing Unit <MipsPipelineCPU_Vga>.
+    Related source file is "MipsPipelineCPU_Vga.v".
+WARNING:Xst:646 - Signal <x_pos<0>> is assigned but never used.
+WARNING:Xst:646 - Signal <PC<31:8>> is assigned but never used.
+WARNING:Xst:646 - Signal <y_pos<0>> is assigned but never used.
+WARNING:Xst:1780 - Signal <sysclk> is never used or assigned.
+Unit <MipsPipelineCPU_Vga> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# ROMs                                                 : 3
+ 16x2-bit ROM                                          : 1
+ 16x32-bit ROM                                         : 1
+ 4x2-bit ROM                                           : 1
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 4
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 29
+ 1-bit register                                        : 7
+ 2-bit register                                        : 5
+ 3-bit register                                        : 1
+ 32-bit register                                       : 10
+ 5-bit register                                        : 5
+ 8-bit register                                        : 1
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 1
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator equal                                : 4
+# Multiplexers                                         : 4
+ 1-bit 8-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 231
+ 1-bit xor2                                            : 50
+ 1-bit xor3                                            : 180
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx92i.
+Reading core <DisplayROM.ngc>.
+Reading core <DataRAM.ngc>.
+Loading core <DisplayROM> for timing and area information for instance <char_tab>.
+Loading core <DataRAM> for timing and area information for instance <DataRAM>.
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RsAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RtAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+WARNING:Xst:1710 - FF/Latch  <q_31> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_30> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_29> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_28> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_27> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_26> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_25> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_24> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_23> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_22> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_21> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_20> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_19> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_18> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_17> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_16> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_15> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_14> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_13> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_12> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_11> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_10> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_9> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_8> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_7> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_6> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_5> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port distributed RAM                   : 2
+# ROMs                                                 : 3
+ 16x2-bit ROM                                          : 1
+ 16x32-bit ROM                                         : 1
+ 4x2-bit ROM                                           : 1
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 4
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 373
+ Flip-Flops                                            : 373
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 1
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator equal                                : 4
+# Multiplexers                                         : 4
+ 1-bit 8-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 231
+ 1-bit xor2                                            : 50
+ 1-bit xor3                                            : 180
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <CLKgen/counter_2> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: Result_shift0002<31>.
+
+Optimizing unit <MipsPipelineCPU_Vga> ...
+
+Optimizing unit <svga_ctrl> ...
+
+Optimizing unit <dffre> ...
+
+Optimizing unit <dffr_3> ...
+
+Optimizing unit <Decode> ...
+
+Optimizing unit <Registers> ...
+
+Optimizing unit <disp_ctrl> ...
+
+Optimizing unit <IF> ...
+
+Optimizing unit <ID> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <EX> ...
+
+Optimizing unit <MipsPipelineCPU> ...
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffre_IFID_Instruction/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffre_IFID_Instruction/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffre_IFID_Instruction/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffre_IFID_Instruction/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_31> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_29> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_28> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_27> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_26> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_24> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_22> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_21> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_5> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_6> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_7> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_8> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_9> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_10> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_11> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_12> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_13> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_14> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_15> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_16> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_17> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_18> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_19> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_Sa/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <cpu_inst/dffr_IDEX_RsAddr/q_4> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <cpu_inst/dffr_IDEX_RtAddr/q_4> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_17> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_18> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/PC_in_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_18> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_17> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/IF/dffre_PC_REG/q_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_17> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_18> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffre_IFID_NextPC/q_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:1710 - FF/Latch  <cpu_inst/dffr_IDEX_RsAddr/q_2> (without init value) has a constant value of 0 in block <MipsPipelineCPU_Vga>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_1> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_7> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_12> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_RdAddr/q_1> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_WB/q_1> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_M/q_0> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_4> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_10> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_2> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_8> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_13> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_RdAddr/q_2> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffre_IFID_Instruction/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffre_IFID_Instruction/q_12> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_11> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_RdAddr/q_0> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_3> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_9> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_15> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 17 FFs/Latches, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_16> <cpu_inst/dffr_IDEX_Imm/q_17> <cpu_inst/dffr_IDEX_Imm/q_18> <cpu_inst/dffr_IDEX_Imm/q_19> <cpu_inst/dffr_IDEX_Imm/q_20> <cpu_inst/dffr_IDEX_Imm/q_21> <cpu_inst/dffr_IDEX_Imm/q_22> <cpu_inst/dffr_IDEX_Imm/q_23> <cpu_inst/dffr_IDEX_Imm/q_24> <cpu_inst/dffr_IDEX_Imm/q_25> <cpu_inst/dffr_IDEX_Imm/q_26> <cpu_inst/dffr_IDEX_Imm/q_27> <cpu_inst/dffr_IDEX_Imm/q_28> <cpu_inst/dffr_IDEX_Imm/q_29> <cpu_inst/dffr_IDEX_Imm/q_30> <cpu_inst/dffr_IDEX_Imm/q_31> <cpu_inst/dffr_IDEX_RdAddr/q_4> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffre_IFID_Instruction/q_4> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 5 FFs/Latches, which will be removed : <cpu_inst/dffre_IFID_Instruction/q_8> <cpu_inst/dffre_IFID_Instruction/q_9> <cpu_inst/dffre_IFID_Instruction/q_10> <cpu_inst/dffre_IFID_Instruction/q_13> <cpu_inst/dffre_IFID_Instruction/q_15> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_14> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_RdAddr/q_3> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_0> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_6> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_2> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 4 FFs/Latches, which will be removed : <cpu_inst/dffr_IDEX_Sa/q_3> <cpu_inst/dffr_IDEX_Sa/q_4> <cpu_inst/dffr_IDEX_Imm/q_13> <cpu_inst/dffr_IDEX_Imm/q_15> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Imm/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_12> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/dffr_IDEX_Sa/q_2> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/dffr_IDEX_Imm/q_4> 
+Found area constraint ratio of 100 (+ 5) on block MipsPipelineCPU_Vga, actual ratio is 7.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_2> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_32> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_0_32> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_3_32> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/dffr_MEMWB_RegWriteAddr/q_2_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+FlipFlop cpu_inst/dffr_EXMEM_RegWriteAddr/q_0 has been replicated 2 time(s)
+FlipFlop cpu_inst/dffr_EXMEM_RegWriteAddr/q_1 has been replicated 1 time(s)
+FlipFlop cpu_inst/dffr_EXMEM_RegWriteAddr/q_3 has been replicated 2 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_RegWriteAddr/q_0 has been replicated 32 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_RegWriteAddr/q_1 has been replicated 32 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_RegWriteAddr/q_2 has been replicated 15 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_RegWriteAddr/q_3 has been replicated 32 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_RegWriteAddr/q_4 has been replicated 1 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_WB/q_0 has been replicated 2 time(s)
+FlipFlop cpu_inst/dffr_MEMWB_WB/q_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <MipsPipelineCPU_Vga> :
+	Found 2-bit shift register for signal <CLKgen/step_key/sync/ff2/q_0>.
+Unit <MipsPipelineCPU_Vga> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 315
+ Flip-Flops                                            : 315
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MipsPipelineCPU_Vga.ngr
+Top Level Output File Name         : MipsPipelineCPU_Vga
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 35
+
+Cell Usage :
+# BELS                             : 2010
+#      GND                         : 3
+#      INV                         : 8
+#      LUT1                        : 36
+#      LUT2                        : 82
+#      LUT2_D                      : 8
+#      LUT2_L                      : 8
+#      LUT3                        : 399
+#      LUT3_D                      : 78
+#      LUT3_L                      : 60
+#      LUT4                        : 868
+#      LUT4_D                      : 69
+#      LUT4_L                      : 120
+#      MUXCY                       : 79
+#      MUXF5                       : 121
+#      MUXF6                       : 1
+#      VCC                         : 3
+#      XORCY                       : 67
+# FlipFlops/Latches                : 324
+#      FD                          : 23
+#      FDR                         : 236
+#      FDRE                        : 51
+#      FDRS                        : 4
+#      FDS                         : 2
+#      LD                          : 8
+# RAMS                             : 66
+#      RAM32X1D                    : 64
+#      RAMB16_S36                  : 1
+#      RAMB16_S9                   : 1
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 4
+#      OBUF                        : 30
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                    1038  out of  13696     7%  
+ Number of Slice Flip Flops:           324  out of  27392     1%  
+ Number of 4 input LUTs:              1993  out of  27392     7%  
+    Number used as logic:             1736
+    Number used as Shift registers:      1
+    Number used as RAMs:               256
+ Number of IOs:                         35
+ Number of bonded IOBs:                 35  out of    556     6%  
+ Number of BRAMs:                        2  out of    136     1%  
+ Number of GCLKs:                        4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+----------------------------------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)                              | Load  |
+-------------------------------------------------------+----------------------------------------------------+-------+
+CLKgen/counter_11                                      | BUFG                                               | 26    |
+clk                                                    | BUFGP                                              | 2     |
+CLKgen/counter_01                                      | BUFG                                               | 24    |
+cpu_clk1(cpu_clk1:O)                                   | BUFG(*)(cpu_inst/ID/MultiRegisters/inst_Mram_mem26)| 329   |
+cpu_inst/IF/PC_in_not0001(cpu_inst/IF/PC_in_not00011:O)| NONE(*)(cpu_inst/IF/PC_in_2)                       | 8     |
+-------------------------------------------------------+----------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 11.066ns (Maximum Frequency: 90.365MHz)
+   Minimum input arrival time before clock: 3.209ns
+   Maximum output required time after clock: 9.178ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLKgen/counter_11'
+  Clock period: 2.957ns (frequency: 338.209MHz)
+  Total number of paths / destination ports: 248 / 31
+-------------------------------------------------------------------------
+Delay:               2.957ns (Levels of Logic = 18)
+  Source:            CLKgen/step_key/div_inst/q_1 (FF)
+  Destination:       CLKgen/step_key/div_inst/q_17 (FF)
+  Source Clock:      CLKgen/counter_11 rising
+  Destination Clock: CLKgen/counter_11 rising
+
+  Data Path: CLKgen/step_key/div_inst/q_1 to CLKgen/step_key/div_inst/q_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.370   0.514  CLKgen/step_key/div_inst/q_1 (CLKgen/step_key/div_inst/q_1)
+     LUT1:I0->O            1   0.275   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<1>_rt (CLKgen/step_key/div_inst/Mcount_q_cy<1>_rt)
+     MUXCY:S->O            1   0.334   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<1> (CLKgen/step_key/div_inst/Mcount_q_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<2> (CLKgen/step_key/div_inst/Mcount_q_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<3> (CLKgen/step_key/div_inst/Mcount_q_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<4> (CLKgen/step_key/div_inst/Mcount_q_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<5> (CLKgen/step_key/div_inst/Mcount_q_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<6> (CLKgen/step_key/div_inst/Mcount_q_cy<6>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<7> (CLKgen/step_key/div_inst/Mcount_q_cy<7>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<8> (CLKgen/step_key/div_inst/Mcount_q_cy<8>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<9> (CLKgen/step_key/div_inst/Mcount_q_cy<9>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<10> (CLKgen/step_key/div_inst/Mcount_q_cy<10>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<11> (CLKgen/step_key/div_inst/Mcount_q_cy<11>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<12> (CLKgen/step_key/div_inst/Mcount_q_cy<12>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<13> (CLKgen/step_key/div_inst/Mcount_q_cy<13>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<14> (CLKgen/step_key/div_inst/Mcount_q_cy<14>)
+     MUXCY:CI->O           1   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<15> (CLKgen/step_key/div_inst/Mcount_q_cy<15>)
+     MUXCY:CI->O           0   0.036   0.000  CLKgen/step_key/div_inst/Mcount_q_cy<16> (CLKgen/step_key/div_inst/Mcount_q_cy<16>)
+     XORCY:CI->O           1   0.708   0.000  CLKgen/step_key/div_inst/Mcount_q_xor<17> (Result<17>)
+     FD:D                      0.208          CLKgen/step_key/div_inst/q_17
+    ----------------------------------------
+    Total                      2.957ns (2.442ns logic, 0.514ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.386ns (frequency: 721.527MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.386ns (Levels of Logic = 1)
+  Source:            CLKgen/counter_1 (FF)
+  Destination:       CLKgen/counter_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CLKgen/counter_1 to CLKgen/counter_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.370   0.533  CLKgen/counter_1 (CLKgen/counter_11)
+     LUT2:I0->O            1   0.275   0.000  CLKgen/Mcount_counter_xor<1>11 (Result<1>)
+     FD:D                      0.208          CLKgen/counter_1
+    ----------------------------------------
+    Total                      1.386ns (0.853ns logic, 0.533ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLKgen/counter_01'
+  Clock period: 4.369ns (frequency: 228.912MHz)
+  Total number of paths / destination ports: 612 / 55
+-------------------------------------------------------------------------
+Delay:               4.369ns (Levels of Logic = 4)
+  Source:            vga_ctrl/line_cnt_reg_3 (FF)
+  Destination:       vga_ctrl/data_en_reg (FF)
+  Source Clock:      CLKgen/counter_01 rising
+  Destination Clock: CLKgen/counter_01 rising
+
+  Data Path: vga_ctrl/line_cnt_reg_3 to vga_ctrl/data_en_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.370   0.635  vga_ctrl/line_cnt_reg_3 (vga_ctrl/line_cnt_reg_3)
+     LUT4:I0->O            2   0.275   0.416  vga_ctrl/Msub_y_pos_xor<6>11_SW0 (N1611)
+     LUT4:I3->O            5   0.275   0.466  vga_ctrl/Msub_y_pos_xor<6>11 (vga_ctrl/N10)
+     LUT4:I3->O            2   0.275   0.514  vga_ctrl/data_en_reg_or000041 (vga_ctrl/N4)
+     LUT4:I0->O            1   0.275   0.331  vga_ctrl/data_en_reg_or000063 (vga_ctrl/data_en_reg_or0000)
+     FDR:R                     0.536          vga_ctrl/data_en_reg
+    ----------------------------------------
+    Total                      4.369ns (2.006ns logic, 2.363ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpu_clk1'
+  Clock period: 11.066ns (frequency: 90.365MHz)
+  Total number of paths / destination ports: 2587904 / 1093
+-------------------------------------------------------------------------
+Delay:               11.066ns (Levels of Logic = 15)
+  Source:            cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_1 (FF)
+  Destination:       cpu_inst/dffr_EXMEM_ALUResult/q_0 (FF)
+  Source Clock:      cpu_clk1 rising
+  Destination Clock: cpu_clk1 rising
+
+  Data Path: cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_1 to cpu_inst/dffr_EXMEM_ALUResult/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.370   0.467  cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_1 (cpu_inst/dffr_MEMWB_RegWriteAddr/q_1_1)
+     LUT2_L:I0->LO         1   0.275   0.118  cpu_inst/EX/ForwardA_0_and0000_SW0 (N8265)
+     LUT4:I2->O            8   0.275   0.576  cpu_inst/EX/ForwardA_0_and0000 (cpu_inst/EX/ForwardA_0_and0000)
+     LUT4:I1->O           18   0.275   0.611  cpu_inst/EX/Mmux_B_not000190_1 (cpu_inst/EX/Mmux_B_not000190)
+     LUT3:I2->O            4   0.275   0.431  cpu_inst/EX/Mmux_B1_SW2 (N8487)
+     LUT3:I2->O           10   0.275   0.000  cpu_inst/EX/ALU_B<0>1 (ALU_B<0>)
+     MUXCY:S->O            1   0.334   0.000  cpu_inst/EX/ALU/Madd_B_adder_addsub0000_cy<0> (cpu_inst/EX/ALU/Madd_B_adder_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.708   0.378  cpu_inst/EX/ALU/Madd_B_adder_addsub0000_xor<1> (cpu_inst/EX/ALU/B_adder_addsub0000<1>)
+     MUXF5:S->O            2   0.539   0.396  cpu_inst/EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst1/co (cpu_inst/EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<2>)
+     LUT3:I2->O            2   0.275   0.396  cpu_inst/EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst2/co (cpu_inst/EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<3>)
+     LUT3:I2->O            5   0.275   0.446  cpu_inst/EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst3/co (cpu_inst/EX/ALU/adder_32bits_ALU/cio<0>)
+     LUT4:I2->O            6   0.275   0.463  cpu_inst/EX/ALU/adder_32bits_ALU/mux_adder_inst1/co27 (cpu_inst/EX/ALU/adder_32bits_ALU/cio<1>)
+     LUT4:I2->O            5   0.275   0.446  cpu_inst/EX/ALU/adder_32bits_ALU/mux_adder_inst2/co27 (cpu_inst/EX/ALU/adder_32bits_ALU/cio<2>)
+     LUT4:I2->O           10   0.275   0.529  cpu_inst/EX/ALU/adder_32bits_ALU/mux_adder_inst4/co27 (cpu_inst/EX/ALU/adder_32bits_ALU/cio<4>)
+     LUT4:I2->O            1   0.275   0.349  cpu_inst/EX/ALU/Result<0>287 (cpu_inst/EX/ALU/Result<0>_map65)
+     LUT4:I2->O            2   0.275   0.000  cpu_inst/EX/ALU/Result<0>352 (ALUResult<0>)
+     FDR:D                     0.208          cpu_inst/dffr_EXMEM_ALUResult/q_0
+    ----------------------------------------
+    Total                     11.066ns (5.459ns logic, 5.607ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKgen/counter_01'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              3.209ns (Levels of Logic = 3)
+  Source:            reset_n_vga (PAD)
+  Destination:       vga_ctrl/vsync_reg (FF)
+  Destination Clock: CLKgen/counter_01 rising
+
+  Data Path: reset_n_vga to vga_ctrl/vsync_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.878   0.446  reset_n_vga_IBUF (reset_n_vga_IBUF)
+     LUT4:I2->O            1   0.275   0.467  vga_ctrl/vsync_reg_or000013 (vga_ctrl/vsync_reg_or0000_map7)
+     LUT4:I0->O            1   0.275   0.331  vga_ctrl/vsync_reg_or000021 (vga_ctrl/vsync_reg_or0000)
+     FDS:S                     0.536          vga_ctrl/vsync_reg
+    ----------------------------------------
+    Total                      3.209ns (1.964ns logic, 1.245ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_clk1'
+  Total number of paths / destination ports: 265 / 265
+-------------------------------------------------------------------------
+Offset:              2.978ns (Levels of Logic = 2)
+  Source:            reset_n (PAD)
+  Destination:       cpu_inst/dffr_IDEX_Sa/q_0 (FF)
+  Destination Clock: cpu_clk1 rising
+
+  Data Path: reset_n to cpu_inst/dffr_IDEX_Sa/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.878   0.533  reset_n_IBUF (reset_n_IBUF)
+     LUT2:I0->O           92   0.275   0.756  cpu_inst/stall_reset1 (cpu_inst/stall_reset)
+     FDR:R                     0.536          cpu_inst/dffr_IDEX_M/q_1
+    ----------------------------------------
+    Total                      2.978ns (1.689ns logic, 1.289ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKgen/counter_11'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.583ns (Levels of Logic = 1)
+  Source:            step (PAD)
+  Destination:       CLKgen/step_key/sync/ff2/Mshreg_q_0 (FF)
+  Destination Clock: CLKgen/counter_11 rising
+
+  Data Path: step to CLKgen/step_key/sync/ff2/Mshreg_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.878   0.331  step_IBUF (CLKgen/step_key_not0000)
+     SRL16:D                   0.373          CLKgen/step_key/sync/ff2/Mshreg_q_0
+    ----------------------------------------
+    Total                      1.583ns (1.251ns logic, 0.331ns route)
+                                       (79.1% logic, 20.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKgen/counter_01'
+  Total number of paths / destination ports: 2596 / 20
+-------------------------------------------------------------------------
+Offset:              9.178ns (Levels of Logic = 9)
+  Source:            vga_ctrl/line_cnt_reg_1 (FF)
+  Destination:       green<7> (PAD)
+  Source Clock:      CLKgen/counter_01 rising
+
+  Data Path: vga_ctrl/line_cnt_reg_1 to green<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.370   0.614  vga_ctrl/line_cnt_reg_1 (vga_ctrl/line_cnt_reg_1)
+     LUT3:I0->O            4   0.275   0.511  vga_ctrl/Msub_y_pos_xor<9>111 (vga_ctrl/N11)
+     LUT4:I1->O            1   0.275   0.000  vga_ctrl/Msub_y_pos_xor<6>12 (N9360)
+     MUXF5:I1->O           9   0.303   0.635  vga_ctrl/Msub_y_pos_xor<6>1_f5 (y_pos<6>)
+     LUT4:I0->O            1   0.275   0.370  disp/vga_pixel105_SW0 (N9097)
+     LUT4:I3->O            1   0.275   0.370  disp/vga_pixel105 (disp/vga_pixel_map38)
+     LUT4:I3->O            1   0.275   0.430  disp/vga_pixel129 (disp/vga_pixel_map40)
+     LUT4:I1->O            1   0.275   0.430  disp/vga_pixel159 (disp/vga_pixel_map42)
+     LUT3:I1->O           16   0.275   0.630  disp/vga_pixel254 (green_0_OBUF)
+     OBUF:I->O                 2.592          green_7_OBUF (green<7>)
+    ----------------------------------------
+    Total                      9.178ns (5.190ns logic, 3.988ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.375ns (Levels of Logic = 1)
+  Source:            CLKgen/counter_0 (FF)
+  Destination:       pixel_clk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: CLKgen/counter_0 to pixel_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.370   0.413  CLKgen/counter_0 (CLKgen/counter_01)
+     OBUF:I->O                 2.592          pixel_clk_OBUF (pixel_clk)
+    ----------------------------------------
+    Total                      3.375ns (2.962ns logic, 0.413ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+CPU : 47.14 / 47.27 s | Elapsed : 48.00 / 48.00 s
+ 
+--> 
+
+Total memory usage is 258952 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  297 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
+

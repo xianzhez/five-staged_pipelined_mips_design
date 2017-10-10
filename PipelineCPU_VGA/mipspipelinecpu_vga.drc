@@ -1,0 +1,260 @@
+WARNING:PhysDesignRules:372 - Gated clock. Clock net cpu_inst/IF/PC_in_not0001
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<9>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem9/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<17>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem17/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<1>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem1/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<0>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<8>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem8/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<16>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem16/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<7>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem7/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<31>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem63/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<6>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem6/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<30>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem62/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<29>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem61/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<28>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem60/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<27>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem59/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<26>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem58/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<25>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem57/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<24>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem56/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<23>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem55/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<22>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem54/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<21>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem53/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<13>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem45/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<20>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem52/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<12>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem44/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<19>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem51/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<11>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem43/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<3>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem35/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<18>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem50/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<10>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem42/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<2>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem34/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<9>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem41/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<1>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem33/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<25>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem25/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<17>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem49/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<8>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem40/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<0>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem32/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<24>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem24/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<16>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem48/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<31>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem31/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<23>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem23/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<15>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem15/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<15>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem47/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<7>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem39/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<30>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem30/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<22>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem22/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<14>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem14/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<14>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem46/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<6>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem38/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<21>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem21/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<13>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem13/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<5>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem5/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<5>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem37/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<29>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem29/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<20>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem20/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<12>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem12/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<4>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem4/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<4>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem36/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<28>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem28/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<11>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem11/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<3>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem3/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<27>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem27/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<19>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem19/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<10>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem10/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<26>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem26/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<18>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem18/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<2>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem2/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+DRC detected 0 errors and 65 warnings.

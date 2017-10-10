@@ -1,0 +1,12 @@
+# Output products list for <DisplayROM>
+DisplayROM.xco
+DisplayROM.ngc
+DisplayROM_xmdf.tcl
+DisplayROM_flist.txt
+DisplayROM.mif
+DisplayROM.vhd
+DisplayROM.vho
+DisplayROM.v
+DisplayROM.veo
+DisplayROM.asy
+DisplayROM.sym

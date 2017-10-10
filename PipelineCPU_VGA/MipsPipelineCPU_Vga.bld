@@ -1,0 +1,36 @@
+Release 9.2i ngdbuild J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx92i\bin\nt\ngdbuild.exe -ise
+E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise -intstyle ise -dd _ngo
+-nt timestamp -uc MipsPipelineCPU.ucf -p xc2vp30-ff896-7 MipsPipelineCPU_Vga.ngc
+MipsPipelineCPU_Vga.ngd
+
+Reading NGO file
+"E:/31101008121220/lab28/PipelineCPU_VGA/MipsPipelineCPU_Vga.ngc" ...
+Loading design module
+"E:\31101008121220\lab28\PipelineCPU_VGA/DisplayROM.ngc"...
+Loading design module "E:\31101008121220\lab28\PipelineCPU_VGA/DataRAM.ngc"...
+
+Applying constraints in "MipsPipelineCPU.ucf" to the design...
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 75476 kilobytes
+
+Writing NGD file "MipsPipelineCPU_Vga.ngd" ...
+
+Writing NGDBUILD log file "MipsPipelineCPU_Vga.bld"...

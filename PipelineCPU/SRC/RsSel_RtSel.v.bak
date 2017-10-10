@@ -1,0 +1,23 @@
+module RsSel_RtSel(
+	RegWrite_wb,RegWriteAddr_wb,RsAddr_id,RtAddr_id,RsSel,RtSel
+	);
+	
+	input  RegWrite_wb;
+	input  [4:0] RegWriteAddr_wb;
+	input  [4:0] RsAddr_id;
+	input  [4:0] RtAddr_id;
+	output  RsSel;
+	output  RtSel;
+	
+//	always @(*)
+//		begin
+//			if((RegWrite_wb==1)&&(RegWriteAddr_wb!=0)&&(RegWriteAddr_wb==RsAddr_id))
+//				RsSel=1;
+//			else if((RegWrite_wb==1)&&(RegWriteAddr_wb!=0)&&(RegWriteAddr_wb==RtAddr_id))
+//				RtSel=1;
+//		end
+	assign RsSel=RegWrite_wb&&(~(RegWriteAddr_wb==5'b0))&&(RegWriteAddr_wb==RsAddr_id);
+	assign RtSel=RegWrite_wb&&(~(RegWriteAddr_wb==5'b0))&&(RegWriteAddr_wb==RtAddr_id);
+
+		
+endmodule

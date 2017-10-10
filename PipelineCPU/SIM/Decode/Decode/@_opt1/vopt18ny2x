@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\wst\lab28\PipelineCPU\SIM\IF
+T_opt
+Z1 VGmWR;hll1^@nSZUX37G051
+Z2 04 11 4 work Decode_tb_v fast 0
+Z3 =1-3859f957af57-52a2cb40-2d2-1418
+Z4 o-quiet -auto_acc_if_foreign -work Decode +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+T_opt1
+Z7 V?gBo>n<Wj0X2PFZNRb8;@3
+R2
+Z8 =1-3859f957af57-52c03e18-9e-2260
+R4
+Z9 n@_opt1
+R6
+vDecode
+Z10 I:j4o`FO_;@<KnH3FHU7X21
+Z11 VZljK8RR7o2iTDaBIhX7e03
+Z12 dE:\31101008121220\lab28\PipelineCPU\SIM\Decode
+Z13 w1386401454
+Z14 8E:/wst/lab28/PipelineCPU/SRC/Decode.v
+Z15 FE:/wst/lab28/PipelineCPU/SRC/Decode.v
+L0 13
+Z16 OE;L;6.5;42
+r1
+31
+Z17 !s102 -nocovercells
+Z18 o-work Decode -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z19 n@decode
+Z20 !s100 5^W8OD1[39mo?XeflL;9_1
+!s85 0
+vDecode_tb_v
+Z21 IS4m?PQ]PHXV`_EZ=dT7K32
+Z22 VNBQjZaeFV?6o2QInj[zFQ2
+R12
+Z23 w1385171010
+Z24 8E:/wst/lab28/PipelineCPU/SIM/Decode/Decode_tb.v
+Z25 FE:/wst/lab28/PipelineCPU/SIM/Decode/Decode_tb.v
+L0 25
+R16
+r1
+31
+R17
+R18
+Z26 n@decode_tb_v
+Z27 !s100 XPCdoH;APA_6S=K:XG_872
+!s85 0

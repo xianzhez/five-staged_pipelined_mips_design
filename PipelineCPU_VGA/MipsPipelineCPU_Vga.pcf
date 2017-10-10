@@ -1,0 +1,44 @@
+//! **************************************************************************
+// Written by: Map J.36 on Sat Dec 28 13:36:28 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "blank" LOCATE = SITE "AC4" LEVEL 1;
+COMP "vga_out_blank_z" LOCATE = SITE "A8" LEVEL 1;
+COMP "vga_comp_synch" LOCATE = SITE "G12" LEVEL 1;
+COMP "hsync" LOCATE = SITE "B8" LEVEL 1;
+COMP "green<0>" LOCATE = SITE "G10" LEVEL 1;
+COMP "green<1>" LOCATE = SITE "E10" LEVEL 1;
+COMP "green<2>" LOCATE = SITE "D10" LEVEL 1;
+COMP "green<3>" LOCATE = SITE "D8" LEVEL 1;
+COMP "green<4>" LOCATE = SITE "C8" LEVEL 1;
+COMP "green<5>" LOCATE = SITE "H11" LEVEL 1;
+COMP "green<6>" LOCATE = SITE "G11" LEVEL 1;
+COMP "green<7>" LOCATE = SITE "E11" LEVEL 1;
+COMP "red<0>" LOCATE = SITE "G8" LEVEL 1;
+COMP "red<1>" LOCATE = SITE "H9" LEVEL 1;
+COMP "red<2>" LOCATE = SITE "G9" LEVEL 1;
+COMP "red<3>" LOCATE = SITE "F9" LEVEL 1;
+COMP "red<4>" LOCATE = SITE "F10" LEVEL 1;
+COMP "red<5>" LOCATE = SITE "D7" LEVEL 1;
+COMP "red<6>" LOCATE = SITE "C7" LEVEL 1;
+COMP "red<7>" LOCATE = SITE "H10" LEVEL 1;
+COMP "run_mode" LOCATE = SITE "AC11" LEVEL 1;
+COMP "reset_n_vga" LOCATE = SITE "AG3" LEVEL 1;
+COMP "vsync" LOCATE = SITE "D11" LEVEL 1;
+COMP "step" LOCATE = SITE "AH4" LEVEL 1;
+COMP "blue<0>" LOCATE = SITE "D15" LEVEL 1;
+COMP "blue<1>" LOCATE = SITE "E15" LEVEL 1;
+COMP "blue<2>" LOCATE = SITE "H15" LEVEL 1;
+COMP "blue<3>" LOCATE = SITE "J15" LEVEL 1;
+COMP "blue<4>" LOCATE = SITE "C13" LEVEL 1;
+COMP "blue<5>" LOCATE = SITE "D13" LEVEL 1;
+COMP "blue<6>" LOCATE = SITE "D14" LEVEL 1;
+COMP "blue<7>" LOCATE = SITE "E14" LEVEL 1;
+COMP "clk" LOCATE = SITE "AJ15" LEVEL 1;
+COMP "pixel_clk" LOCATE = SITE "H12" LEVEL 1;
+COMP "reset_n" LOCATE = SITE "AG5" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "CLKgen/counter_1" BEL "CLKgen/counter_0";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+SCHEMATIC END;

@@ -1,0 +1,247 @@
+m255
+13
+cModel Technology
+dE:\31101008121220\lab28\PipelineCPU\ISE
+vadder_32bits
+IE3lF8eVM4_168?e4[i>Xb2
+VH3MfAaUBUHMniOHlZdcI;0
+w1385559146
+F../SRC/adder_32bits.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vadder_4bits
+I8[ed>GL9m_M_6Q=K`]FY03
+VgZ^oLAGTcn2JM[I5V:91i3
+w1385176056
+F../SRC/adder_4bits.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vALU
+I]3`mAQT58<FL_D;W;>G>b0
+VaV^i_k8i[S<RQoIRA9CmA3
+w1387612082
+F../SRC/ALU.v
+L0 15
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@a@l@u
+vDataRAM
+IiN?O[7=6kQ2JWo:c3F]Oj1
+VKYoF^0NHFE_zJ6PA58`]C1
+w1387808324
+F../SRC/DataRAM.v
+L0 40
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@data@r@a@m
+vDecode
+IYGTCaNIhJ[8c=EBBQLnU:0
+VZljK8RR7o2iTDaBIhX7e03
+w1387785890
+F../SRC/Decode.v
+L0 13
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@decode
+vdff
+IRKg7^lDE^B`]29loMUBT<3
+VQJf=onUaMX6VY4JoHzE;B2
+w1385171012
+F../SRC/ff_lib.v
+L0 4
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vdffr
+I:U^LWl9ZH9jg?B[Fl1=Fo2
+VTJ0dVO56HCY3EBFS?gH0;3
+w1385171012
+F../SRC/ff_lib.v
+L0 20
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vdffre
+I4n>@7Ibl7V7FZjH[X9Hnz0
+V7ZQ^8ZXQf6:_SW]:fGY<B2
+w1385171012
+F../SRC/ff_lib.v
+L0 42
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vEX
+IN=`El4Xc>X@no<J31b^QG3
+V0A0nRSRQ=2kL8]LV_8?W]2
+w1387810580
+F../SRC/EX.v
+L0 21
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@e@x
+vfull_adder
+IQ3Of2g:>[DPLJ=4YfNRd=3
+VNMW:TCXRdHao]1I3[6Q_<0
+w1385174200
+F../SRC/full_adder.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vglbl
+IT?5S;>bN`@zG_25]R_4A33
+VnN]4Gon>inod6>M^M2[SV1
+w1179523376
+FC:/Xilinx92i/verilog/src/glbl.v
+L0 5
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vHazard_detector
+ImnPeX_`_NfT>FXR0BS<480
+V@2C?m@@VX7XcY_Ncz:@o41
+w1387599638
+F../SRC/Hazard_detector.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@hazard_detector
+vID
+ICeD^k4@DBn`=]<VHfYE8e0
+V9XZOY637e@EL?E`dGcfTD2
+w1387780386
+F../SRC/ID.v
+L0 21
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@i@d
+vIF
+IH:`QfT^ZJF?=iZiE9bGI[0
+V09l=010ji^o>c6joDMjlR1
+w1386388506
+F../SRC/IF.v
+L0 21
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@i@f
+vInstructionROM
+I<S^@^CWmnN@6_dVoSVQ9J2
+Vo`C5oIU4Q39o^5hU;3[bg1
+w1387807162
+F../SRC/InstructionROM.v
+L0 2
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@instruction@r@o@m
+vMipsPipelineCPU
+IST8[Q8?bV@jfW3F27iYG<0
+VMkJZ6G:<VU`:5Lh1Lflc;3
+w1387798876
+F../SRC/MipsPipelineCPU.v
+L0 21
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@mips@pipeline@c@p@u
+vmux_adder
+I^^:]ma<3>RoC^Y3ZBAhoV0
+VHA=<^HM[?BnD;DNFC1EaP3
+w1385178494
+F../SRC/mux_adder.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vRegisters
+IS@7fgdIgU56@_]K:H8?Eh3
+VX_4h:Z>7mIP7EB7dHNCAj2
+w1385171014
+F../SRC/Registers.v
+L0 4
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@registers
+vRsSel_RtSel
+I90l=J[Z@Z1QQOocoAIP<73
+V;ZD>oX_Ofafe;I7=iR_z]2
+w1387779284
+F../SRC/RsSel_RtSel.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@rs@sel_@rt@sel
+vtop_tb_v
+Imfo_hSE;6obEc7nM_M6GN0
+Vb`ho<^?2]17_>iDcjNoLk1
+w1385171012
+F../SIM/top1228/top_tb.v
+L0 25
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+vZero_test
+In8IoM`]2gDP07MV>0LY6J1
+VHB<H<cbcaSi^JY6;S8JnV2
+w1387612414
+F../SRC/Zero_test.v
+L0 1
+OE;L;6.0c;29
+r1
+31
+o+acc
+tGenerateLoopIterationMax 100000
+n@zero_test

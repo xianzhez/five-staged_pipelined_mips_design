@@ -1,0 +1,61 @@
+E:/wst/lab28/PipelineCPU/SRC/mux_adder.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module mux_adder
+
+Top level modules:
+	mux_adder
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/adder_4bits.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_4bits
+
+Top level modules:
+	adder_4bits
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/full_adder.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/full_adder.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/ff_lib.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module dff
+-- Compiling module dffr
+-- Compiling module dffre
+
+Top level modules:
+	dff
+	dffr
+	dffre
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/adder_32bits.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_32bits
+
+Top level modules:
+	adder_32bits
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/IF.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/IF.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module IF
+
+Top level modules:
+	IF
+
+} {} {}} E:/wst/lab28/PipelineCPU/SIM/IF/IF_tb.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SIM/IF/IF_tb.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module IF_tb_v
+
+Top level modules:
+	IF_tb_v
+
+} {} {}} E:/wst/lab28/PipelineCPU/SRC/InstructionROM.v {1 {vlog -work IF -vopt -nocovercells E:/wst/lab28/PipelineCPU/SRC/InstructionROM.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module InstructionROM
+
+Top level modules:
+	InstructionROM
+
+} {} {}}

@@ -1,0 +1,11 @@
+# Output products list for <DataRAM>
+DataRAM.asy
+DataRAM.ngc
+DataRAM.sym
+DataRAM.v
+DataRAM.veo
+DataRAM.vhd
+DataRAM.vho
+DataRAM.xco
+DataRAM_flist.txt
+DataRAM_xmdf.tcl
