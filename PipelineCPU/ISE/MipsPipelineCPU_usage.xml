@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="1">
+<DesignStatistics TimeStamp="Sat Dec 28 13:20:20 2013"><group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="1">
+<attrib name="value" value="3.547500"/></item>
+<item name="AVG_SIG_FANOUT" rev="1">
+<attrib name="value" value="3.150000"/></item>
+<item name="FOUR_LOAD_SIG" rev="1">
+<attrib name="value" value="47"/></item>
+<item name="LUT" rev="1">
+<attrib name="value" value="1653"/></item>
+<item name="MAX_SIG_FANOUT" rev="1">
+<attrib name="value" value="141"/></item>
+<item name="PK_NUM_4_INPUT_LUTS" rev="1">
+<attrib name="value" value="1653"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="1">
+<attrib name="value" value="198"/></item>
+<item name="PK_NUM_CYINIT" rev="1">
+<attrib name="value" value="20"/></item>
+<item name="PK_NUM_CYMUX" rev="1">
+<attrib name="value" value="38"/></item>
+<item name="PK_NUM_DP_RAMS" rev="1">
+<attrib name="value" value="128"/></item>
+<item name="PK_NUM_EQUIV_GATES" rev="1">
+<attrib name="value" value="111"/></item>
+<item name="PK_NUM_JTAG_GATES" rev="1">
+<attrib name="value" value="198"/></item>
+<item name="PK_NUM_LUTLESS_SLICE_FFS" rev="1">
+<attrib name="value" value="118"/></item>
+<item name="PK_NUM_LUTLESS_SLICE_LATS" rev="1">
+<attrib name="value" value="32"/></item>
+<item name="PK_NUM_MUXF5" rev="1">
+<attrib name="value" value="158"/></item>
+<item name="PK_NUM_MUXFS" rev="1">
+<attrib name="value" value="222"/></item>
+<item name="PK_NUM_SLICES" rev="1">
+<attrib name="value" value="1052"/></item>
+<item name="PK_NUM_SLICE_FFS" rev="1">
+<attrib name="value" value="312"/></item>
+<item name="PK_NUM_SLICE_LATS" rev="1">
+<attrib name="value" value="32"/></item>
+<item name="PK_NUM_TOTAL_LUTLESS_REGISTERS" rev="1">
+<attrib name="value" value="144"/></item>
+<item name="PK_NUM_XOR" rev="1">
+<attrib name="value" value="31"/></item>
+<item name="PK_NUM_XV2_BLOCKRAMS" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="PK_NUM_XV2_GCLKS" rev="1">
+<attrib name="value" value="2"/></item>
+<item name="SINGLE_LOAD_SIG" rev="1">
+<attrib name="value" value="951"/></item>
+<item name="THREE_LOAD_SIG" rev="1">
+<attrib name="value" value="62"/></item>
+<item name="TWO_LOAD_SIG" rev="1">
+<attrib name="value" value="360"/></item>
+<item name="Xilinx Core blkmemsp_v6_2, Coregen 9.2i" rev="1">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

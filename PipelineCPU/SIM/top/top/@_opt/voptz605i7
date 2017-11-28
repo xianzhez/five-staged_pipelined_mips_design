@@ -1,0 +1,324 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\wst\31101008121220\lab28\PipelineCPU\SIM\PipelineCPU
+T_opt
+Z1 VEW@dniU=mV4BJi^kjRZES3
+Z2 04 8 4 work top_tb_v fast 0
+Z3 =3-3859f957af57-52b84f2b-199-c6c
+Z4 o-quiet -auto_acc_if_foreign -work top -L D:/FPGA/ModelSim/Xilinx_lib/xilinxcorelib_ver -L D:/FPGA/ModelSim/Xilinx_lib/unisim_ver -L D:/FPGA/ModelSim/Xilinx_lib/simprim_ver +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+vadder_32bits
+Z7 Ia@79LZO17TXc8AhO5TE061
+Z8 VH3MfAaUBUHMniOHlZdcI;0
+Z9 dE:\wst\31101008121220\lab28\PipelineCPU\SIM\top1221
+Z10 w1385559146
+Z11 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/adder_32bits.v
+Z12 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/adder_32bits.v
+L0 1
+Z13 OE;L;6.5;42
+r1
+31
+Z14 !s102 -nocovercells
+Z15 o-work top -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z16 !s100 E3lF8eVM4_168?e4[i>Xb2
+!s85 0
+vadder_4bits
+Z17 I]gZ`]??]kgmzTK]6IDDF>0
+Z18 VgZ^oLAGTcn2JM[I5V:91i3
+R9
+Z19 w1385176056
+Z20 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/adder_4bits.v
+Z21 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/adder_4bits.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z22 !s100 8[ed>GL9m_M_6Q=K`]FY03
+!s85 0
+vALU
+Z23 I?^>M87R;Gd>55fc316:[G0
+Z24 VaV^i_k8i[S<RQoIRA9CmA3
+R9
+Z25 w1387612082
+Z26 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/ALU.v
+Z27 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/ALU.v
+L0 15
+R13
+r1
+31
+R14
+R15
+Z28 n@a@l@u
+Z29 !s100 ]3`mAQT58<FL_D;W;>G>b0
+!s85 0
+vDataRAM
+Z30 IASVQH1I80PM<>JO<ZzXo`2
+Z31 VKYoF^0NHFE_zJ6PA58`]C1
+R9
+Z32 w1387597140
+Z33 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/DataRAM.v
+Z34 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/DataRAM.v
+L0 40
+R13
+r1
+31
+R14
+R15
+Z35 n@data@r@a@m
+Z36 !s100 VKS9kJ`0CNd0P]0D>2>ok3
+!s85 0
+vDecode
+Z37 I<ODQJRK4P5EfjFcSRLLBS1
+Z38 VZljK8RR7o2iTDaBIhX7e03
+R9
+Z39 w1387785889
+Z40 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/Decode.v
+Z41 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/Decode.v
+L0 13
+R13
+r1
+31
+R14
+R15
+Z42 n@decode
+Z43 !s100 YGTCaNIhJ[8c=EBBQLnU:0
+!s85 0
+vdff
+Z44 IfeM]ETNmHBTS;Mf]_6=eG3
+Z45 VQJf=onUaMX6VY4JoHzE;B2
+R9
+Z46 w1385171012
+Z47 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/ff_lib.v
+Z48 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/ff_lib.v
+L0 4
+R13
+r1
+31
+R14
+R15
+Z49 !s100 RKg7^lDE^B`]29loMUBT<3
+!s85 0
+vdffr
+Z50 IY0`Ah9C?JW4:P=L:2ZJf23
+Z51 VTJ0dVO56HCY3EBFS?gH0;3
+R9
+R46
+R47
+R48
+L0 20
+R13
+r1
+31
+R14
+R15
+Z52 !s100 :U^LWl9ZH9jg?B[Fl1=Fo2
+!s85 0
+vdffre
+Z53 IL75F0kVAdSEKFI21ggbE>0
+Z54 V7ZQ^8ZXQf6:_SW]:fGY<B2
+R9
+R46
+R47
+R48
+L0 42
+R13
+r1
+31
+R14
+R15
+Z55 !s100 4n>@7Ibl7V7FZjH[X9Hnz0
+!s85 0
+vEX
+Z56 IP<0V?Qb2iAHZIJW1WT:Ge3
+Z57 V0A0nRSRQ=2kL8]LV_8?W]2
+R9
+Z58 w1387810578
+Z59 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/EX.v
+Z60 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/EX.v
+L0 21
+R13
+r1
+31
+R14
+R15
+n@e@x
+Z61 !s100 N=`El4Xc>X@no<J31b^QG3
+!s85 0
+vfull_adder
+Z62 IJ=cI2VJSBZ=IIPKiSf5H_0
+Z63 VNMW:TCXRdHao]1I3[6Q_<0
+R9
+Z64 w1385174200
+Z65 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/full_adder.v
+Z66 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/full_adder.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z67 !s100 Q3Of2g:>[DPLJ=4YfNRd=3
+!s85 0
+vHazard_detector
+Z68 I5Sf3]T]d7:Re`ERL1RdHz1
+Z69 V@2C?m@@VX7XcY_Ncz:@o41
+R9
+Z70 w1387599638
+Z71 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/Hazard_detector.v
+Z72 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/Hazard_detector.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z73 n@hazard_detector
+Z74 !s100 mnPeX_`_NfT>FXR0BS<480
+!s85 0
+vID
+Z75 IT[7g[CQl1gIi>mg3DSZm^3
+Z76 V9XZOY637e@EL?E`dGcfTD2
+R9
+Z77 w1387607944
+Z78 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/ID.v
+Z79 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/ID.v
+L0 21
+R13
+r1
+31
+R14
+R15
+n@i@d
+Z80 !s100 CeD^k4@DBn`=]<VHfYE8e0
+!s85 0
+vIF
+Z81 IWLS4Vcan_3KcNb5^@?lTF2
+Z82 V09l=010ji^o>c6joDMjlR1
+R9
+Z83 w1386388506
+Z84 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/IF.v
+Z85 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/IF.v
+L0 21
+R13
+r1
+31
+R14
+R15
+n@i@f
+Z86 !s100 H:`QfT^ZJF?=iZiE9bGI[0
+!s85 0
+vInstructionROM
+Z87 ILZUo@^0@^J0d1ah:d^?b:1
+Z88 Vo`C5oIU4Q39o^5hU;3[bg1
+R9
+Z89 w1387807160
+Z90 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/InstructionROM.v
+Z91 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/InstructionROM.v
+L0 2
+R13
+r1
+31
+R14
+R15
+Z92 n@instruction@r@o@m
+Z93 !s100 <S^@^CWmnN@6_dVoSVQ9J2
+!s85 0
+vMipsPipelineCPU
+Z94 IOo??282aLabV`hEINi<aW1
+Z95 VMkJZ6G:<VU`:5Lh1Lflc;3
+R9
+Z96 w1387798874
+Z97 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/MipsPipelineCPU.v
+Z98 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/MipsPipelineCPU.v
+L0 21
+R13
+r1
+31
+R14
+R15
+Z99 n@mips@pipeline@c@p@u
+Z100 !s100 ST8[Q8?bV@jfW3F27iYG<0
+!s85 0
+vmux_adder
+Z101 I>7njG[R4RlZ]c@>e>]7=o3
+Z102 VHA=<^HM[?BnD;DNFC1EaP3
+R9
+Z103 w1385178494
+Z104 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/mux_adder.v
+Z105 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/mux_adder.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z106 !s100 ^^:]ma<3>RoC^Y3ZBAhoV0
+!s85 0
+vRegisters
+Z107 IbkaeW?IX]11YnUH<Uz1ZL0
+Z108 VX_4h:Z>7mIP7EB7dHNCAj2
+R9
+Z109 w1385171014
+Z110 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/Registers.v
+Z111 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/Registers.v
+L0 4
+R13
+r1
+31
+R14
+R15
+Z112 n@registers
+Z113 !s100 S@7fgdIgU56@_]K:H8?Eh3
+!s85 0
+vRsSel_RtSel
+Z114 IXOAA4C4nB955E1ENO<zlQ0
+Z115 V;ZD>oX_Ofafe;I7=iR_z]2
+R9
+Z116 w1387779283
+Z117 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/RsSel_RtSel.v
+Z118 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/RsSel_RtSel.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z119 n@rs@sel_@rt@sel
+Z120 !s100 90l=J[Z@Z1QQOocoAIP<73
+!s85 0
+vtop_tb_v
+Z121 Ij5aSb0?j6C>8g0?e6dSDd1
+Z122 Vb`ho<^?2]17_>iDcjNoLk1
+R9
+R46
+Z123 8E:/wst/31101008121220/lab28/PipelineCPU/SIM/top1221/top_tb.v
+Z124 FE:/wst/31101008121220/lab28/PipelineCPU/SIM/top1221/top_tb.v
+L0 25
+R13
+r1
+31
+R15
+R14
+Z125 !s100 mfo_hSE;6obEc7nM_M6GN0
+!s85 0
+vZero_test
+Z126 I?NkodNhKY>jcF]T1CD4LP3
+Z127 VHB<H<cbcaSi^JY6;S8JnV2
+R9
+Z128 w1387612414
+Z129 8E:/wst/31101008121220/lab28/PipelineCPU/SRC/Zero_test.v
+Z130 FE:/wst/31101008121220/lab28/PipelineCPU/SRC/Zero_test.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z131 n@zero_test
+Z132 !s100 n8IoM`]2gDP07MV>0LY6J1
+!s85 0

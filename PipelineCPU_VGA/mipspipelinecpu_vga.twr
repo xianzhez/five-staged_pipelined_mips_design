@@ -1,0 +1,73 @@
+--------------------------------------------------------------------------------
+Release 9.2i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx92i\bin\nt\trce.exe -ise
+E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise -intstyle ise -e 3 -s 7
+-xml MipsPipelineCPU_Vga MipsPipelineCPU_Vga.ncd -o MipsPipelineCPU_Vga.twr
+MipsPipelineCPU_Vga.pcf -ucf MipsPipelineCPU.ucf
+
+Design file:              mipspipelinecpu_vga.ncd
+Physical constraint file: mipspipelinecpu_vga.pcf
+Device,package,speed:     xc2vp30,ff896,-7 (PRODUCTION 1.93 2007-04-13)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+
+ 3 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   1.926ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.926|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 3 paths, 0 nets, and 7 connections
+
+Design statistics:
+   Minimum period:   1.926ns   (Maximum frequency: 519.211MHz)
+
+
+Analysis completed Sat Dec 28 13:36:51 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 153 MB
+
+
+

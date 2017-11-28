@@ -1,0 +1,156 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\wst\lab28\recycle\ID
+T_opt
+VNMm<YCSMUl7]f;H[OV<Gd1
+Z1 04 8 4 work ALU_tb_v fast 0
+=1-3859f957af57-52b4733b-cf-1a48
+Z2 o-quiet -auto_acc_if_foreign -work ALU +acc
+n@_opt
+Z3 OE;O;6.5;42
+T_opt1
+VcKY^oVLg[TX1zCbYmZN`R0
+R1
+=1-3859f957af57-52c03a88-2d0-1f8c
+R2
+n@_opt1
+R3
+vadder_32bits
+I[8RAfU2??9_P2zigA_?ao3
+VH3MfAaUBUHMniOHlZdcI;0
+Z4 dE:\31101008121220\lab28\PipelineCPU\SIM\ALU
+w1385559145
+8E:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+FE:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+L0 1
+Z5 OE;L;6.5;42
+r1
+31
+Z6 !s102 -nocovercells
+Z7 o-work ALU -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 E3lF8eVM4_168?e4[i>Xb2
+!s85 0
+vadder_4bits
+Ie0`:Eca1dFVMCiULhXOL]1
+VgZ^oLAGTcn2JM[I5V:91i3
+R4
+w1385176056
+8E:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+FE:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!s100 8[ed>GL9m_M_6Q=K`]FY03
+!s85 0
+vALU
+IR9[]U7=nKUIBgBAFK4L;23
+VaV^i_k8i[S<RQoIRA9CmA3
+R4
+w1387557678
+8E:/wst/lab28/PipelineCPU/SRC/ALU.v
+FE:/wst/lab28/PipelineCPU/SRC/ALU.v
+L0 15
+R5
+r1
+31
+R6
+R7
+n@a@l@u
+!s100 P:R]4NG;EgmM4Xh=2UOMa0
+!s85 0
+vALU_tb_v
+!s100 d6HGcGm_1<;nz`Aj`lzDE0
+IE9D58fb:mfC5kSm=UBlRb0
+Vn8E^2mJkklB5[VY2iKST@2
+R4
+w1385171010
+8E:/wst/lab28/PipelineCPU/SIM/ALU/ALU_tb.v
+FE:/wst/lab28/PipelineCPU/SIM/ALU/ALU_tb.v
+L0 25
+R5
+r1
+!s85 0
+31
+R6
+R7
+n@a@l@u_tb_v
+vdff
+IZPkgDg]ah>l@BSL5YI3o<1
+VQJf=onUaMX6VY4JoHzE;B2
+R4
+Z8 w1385171012
+Z9 8E:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+Z10 FE:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+L0 4
+R5
+r1
+31
+R6
+R7
+!s100 RKg7^lDE^B`]29loMUBT<3
+!s85 0
+vdffr
+IPZZfGSzJ[2e@kh:U?GTgG0
+VTJ0dVO56HCY3EBFS?gH0;3
+R4
+R8
+R9
+R10
+L0 20
+R5
+r1
+31
+R6
+R7
+!s100 :U^LWl9ZH9jg?B[Fl1=Fo2
+!s85 0
+vdffre
+I3@ZCTJJ98N9TLb9FB0h=f2
+V7ZQ^8ZXQf6:_SW]:fGY<B2
+R4
+R8
+R9
+R10
+L0 42
+R5
+r1
+31
+R6
+R7
+!s100 4n>@7Ibl7V7FZjH[X9Hnz0
+!s85 0
+vfull_adder
+IUDaQ^b]DQG0T13_O@Bi[_0
+VNMW:TCXRdHao]1I3[6Q_<0
+R4
+w1385174200
+8E:/wst/lab28/PipelineCPU/SRC/full_adder.v
+FE:/wst/lab28/PipelineCPU/SRC/full_adder.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!s100 Q3Of2g:>[DPLJ=4YfNRd=3
+!s85 0
+vmux_adder
+I=R2BSEoho3z@BE[5_j:HL2
+VHA=<^HM[?BnD;DNFC1EaP3
+R4
+w1385178494
+8E:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+FE:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!s100 ^^:]ma<3>RoC^Y3ZBAhoV0
+!s85 0

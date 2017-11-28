@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\wst\cpsci\3110100812\my\lab7\sim\mux_adder
+T_opt
+Z1 V]c5MbaQONQXI8EQOQLggm3
+Z2 04 7 4 work IF_tb_v fast 0
+Z3 =1-3859f957af57-52a2adf5-309-1340
+Z4 o-quiet -auto_acc_if_foreign -work IF +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+vadder_32bits
+Z7 I_D=<Q7oRUU537`>Inoh1g2
+Z8 VH3MfAaUBUHMniOHlZdcI;0
+Z9 dE:\wst\lab28\PipelineCPU\SIM\IF
+Z10 w1385559145
+Z11 8E:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+Z12 FE:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+L0 1
+Z13 OE;L;6.5;42
+r1
+31
+Z14 !s102 -nocovercells
+Z15 o-work IF -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z16 !s100 E3lF8eVM4_168?e4[i>Xb2
+!s85 0
+vadder_4bits
+Z17 IM30mjV66d9b[U>@La24IB2
+Z18 VgZ^oLAGTcn2JM[I5V:91i3
+R9
+Z19 w1385176056
+Z20 8E:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+Z21 FE:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z22 !s100 8[ed>GL9m_M_6Q=K`]FY03
+!s85 0
+vdff
+Z23 IaP21G2GCm6il=EFlJzh=63
+Z24 VQJf=onUaMX6VY4JoHzE;B2
+R9
+Z25 w1385171012
+Z26 8E:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+Z27 FE:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+L0 4
+R13
+r1
+31
+R14
+R15
+Z28 !s100 RKg7^lDE^B`]29loMUBT<3
+!s85 0
+vdffr
+Z29 IJzHMO[ER3ld<QPHgFzQOW2
+Z30 VTJ0dVO56HCY3EBFS?gH0;3
+R9
+R25
+R26
+R27
+L0 20
+R13
+r1
+31
+R14
+R15
+Z31 !s100 :U^LWl9ZH9jg?B[Fl1=Fo2
+!s85 0
+vdffre
+Z32 IJ^K[4^?_aj_lF4_>6]lae0
+Z33 V7ZQ^8ZXQf6:_SW]:fGY<B2
+R9
+R25
+R26
+R27
+L0 42
+R13
+r1
+31
+R14
+R15
+Z34 !s100 4n>@7Ibl7V7FZjH[X9Hnz0
+!s85 0
+vfull_adder
+Z35 IddC48>A9iiSnST]a5@WDD0
+Z36 VNMW:TCXRdHao]1I3[6Q_<0
+R9
+Z37 w1385174200
+Z38 8E:/wst/lab28/PipelineCPU/SRC/full_adder.v
+Z39 FE:/wst/lab28/PipelineCPU/SRC/full_adder.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z40 !s100 Q3Of2g:>[DPLJ=4YfNRd=3
+!s85 0
+vIF
+Z41 I?]KE39fBM:1YYF9QJ6f[H3
+Z42 V09l=010ji^o>c6joDMjlR1
+R9
+Z43 w1386388504
+Z44 8E:/wst/lab28/PipelineCPU/SRC/IF.v
+Z45 FE:/wst/lab28/PipelineCPU/SRC/IF.v
+L0 21
+R13
+r1
+31
+R14
+R15
+n@i@f
+Z46 !s100 H:`QfT^ZJF?=iZiE9bGI[0
+!s85 0
+vIF_tb_v
+Z47 IBWRIg_f5O5@E:]ZKaj?c@1
+Z48 VG;OM=oK9kU8AFe@k2@1GT0
+R9
+R25
+Z49 8E:/wst/lab28/PipelineCPU/SIM/IF/IF_tb.v
+Z50 FE:/wst/lab28/PipelineCPU/SIM/IF/IF_tb.v
+L0 25
+R13
+r1
+31
+R14
+R15
+Z51 n@i@f_tb_v
+Z52 !s100 egB96oCOTB^jamDoA7oi^1
+!s85 0
+vInstructionROM
+Z53 IM4>k7J2=9F63UCcIEE1321
+Z54 Vo`C5oIU4Q39o^5hU;3[bg1
+R9
+Z55 w1385171014
+Z56 8E:/wst/lab28/PipelineCPU/SRC/InstructionROM.v
+Z57 FE:/wst/lab28/PipelineCPU/SRC/InstructionROM.v
+L0 2
+R13
+r1
+31
+R14
+R15
+Z58 n@instruction@r@o@m
+Z59 !s100 G@_O[VR5PmA0VPW7`WHkc0
+!s85 0
+vmux_adder
+Z60 Ib?eeTW<I9TGDzKDCe[X^N2
+Z61 VHA=<^HM[?BnD;DNFC1EaP3
+R9
+Z62 w1385178494
+Z63 8E:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+Z64 FE:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z65 !s100 ^^:]ma<3>RoC^Y3ZBAhoV0
+!s85 0

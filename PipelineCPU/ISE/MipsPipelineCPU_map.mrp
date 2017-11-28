@@ -1,0 +1,564 @@
+Release 9.2i Map J.36
+Xilinx Mapping Report File for Design 'MipsPipelineCPU'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx92i\bin\nt\map.exe -ise
+E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise -intstyle ise -p
+xc2vp30-ff896-7 -cm area -pr b -k 4 -c 100 -tx off -o MipsPipelineCPU_map.ncd
+MipsPipelineCPU.ngd MipsPipelineCPU.pcf 
+Target Device  : xc2vp30
+Target Package : ff896
+Target Speed   : -7
+Mapper Version : virtex2p -- $Revision: 1.36 $
+Mapped Date    : Sat Dec 28 13:20:15 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   66
+Logic Utilization:
+  Total Number Slice Registers:       344 out of  27,392    1%
+    Number used as Flip Flops:                   312
+    Number used as Latches:                       32
+  Number of 4 input LUTs:           1,653 out of  27,392    6%
+Logic Distribution:
+  Number of occupied Slices:        1,052 out of  13,696    7%
+  Number of Slices containing only related logic:   1,052 out of   1,052  100%
+  Number of Slices containing unrelated logic:          0 out of   1,052    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          1,909 out of  27,392    6%
+  Number used as logic:             1,653
+  Number used for Dual Port RAMs:     256
+    (Two LUTs used per Dual Port RAM)
+
+  Number of bonded IOBs:              198 out of     556   35%
+  Number of PPC405s:                   0 out of       2    0%
+  Number of Block RAMs:                 1 out of     136    1%
+  Number of GCLKs:                      2 out of      16   12%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  111,757
+Additional JTAG gate count for IOBs:  9,504
+Peak Memory Usage:  197 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network ID/MultiRegisters/inst_Mram_mem/SPO has no
+   load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 63
+   more times for the following (max. 5 shown):
+   ID/MultiRegisters/inst_Mram_mem1/SPO,
+   ID/MultiRegisters/inst_Mram_mem2/SPO,
+   ID/MultiRegisters/inst_Mram_mem3/SPO,
+   ID/MultiRegisters/inst_Mram_mem4/SPO,
+   ID/MultiRegisters/inst_Mram_mem5/SPO
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<0>/ID/MultiRegisters/inst_Mram_mem/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<8>/ID/MultiRegisters/inst_Mram_mem8/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<16>/ID/MultiRegisters/inst_Mram_mem16/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<24>/ID/MultiRegisters/inst_Mram_mem24/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<0>/ID/MultiRegisters/inst_Mram_mem32/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<9>/ID/MultiRegisters/inst_Mram_mem9/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<17>/ID/MultiRegisters/inst_Mram_mem17/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<25>/ID/MultiRegisters/inst_Mram_mem25/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<1>/ID/MultiRegisters/inst_Mram_mem33/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<1>/ID/MultiRegisters/inst_Mram_mem1/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<10>/ID/MultiRegisters/inst_Mram_mem10/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<18>/ID/MultiRegisters/inst_Mram_mem18/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<26>/ID/MultiRegisters/inst_Mram_mem26/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<2>/ID/MultiRegisters/inst_Mram_mem34/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<10>/ID/MultiRegisters/inst_Mram_mem42/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<11>/ID/MultiRegisters/inst_Mram_mem11/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<19>/ID/MultiRegisters/inst_Mram_mem19/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<27>/ID/MultiRegisters/inst_Mram_mem27/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<3>/ID/MultiRegisters/inst_Mram_mem35/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<11>/ID/MultiRegisters/inst_Mram_mem43/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<20>/ID/MultiRegisters/inst_Mram_mem20/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<28>/ID/MultiRegisters/inst_Mram_mem28/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<4>/ID/MultiRegisters/inst_Mram_mem36/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<12>/ID/MultiRegisters/inst_Mram_mem44/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<20>/ID/MultiRegisters/inst_Mram_mem52/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<21>/ID/MultiRegisters/inst_Mram_mem21/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<29>/ID/MultiRegisters/inst_Mram_mem29/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<5>/ID/MultiRegisters/inst_Mram_mem37/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<13>/ID/MultiRegisters/inst_Mram_mem45/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<21>/ID/MultiRegisters/inst_Mram_mem53/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<30>/ID/MultiRegisters/inst_Mram_mem30/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<6>/ID/MultiRegisters/inst_Mram_mem38/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<14>/ID/MultiRegisters/inst_Mram_mem46/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<22>/ID/MultiRegisters/inst_Mram_mem54/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<30>/ID/MultiRegisters/inst_Mram_mem62/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<31>/ID/MultiRegisters/inst_Mram_mem31/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<7>/ID/MultiRegisters/inst_Mram_mem39/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<15>/ID/MultiRegisters/inst_Mram_mem47/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<23>/ID/MultiRegisters/inst_Mram_mem55/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<31>/ID/MultiRegisters/inst_Mram_mem63/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<8>/ID/MultiRegisters/inst_Mram_mem40/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<16>/ID/MultiRegisters/inst_Mram_mem48/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<24>/ID/MultiRegisters/inst_Mram_mem56/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<9>/ID/MultiRegisters/inst_Mram_mem41/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<17>/ID/MultiRegisters/inst_Mram_mem49/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<25>/ID/MultiRegisters/inst_Mram_mem57/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<18>/ID/MultiRegisters/inst_Mram_mem50/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<26>/ID/MultiRegisters/inst_Mram_mem58/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<27>/ID/MultiRegisters/inst_Mram_mem59/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<19>/ID/MultiRegisters/inst_Mram_mem51/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<28>/ID/MultiRegisters/inst_Mram_mem60/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0001<29>/ID/MultiRegisters/inst_Mram_mem61/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<2>/ID/MultiRegisters/inst_Mram_mem2/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<3>/ID/MultiRegisters/inst_Mram_mem3/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<12>/ID/MultiRegisters/inst_Mram_mem12/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<4>/ID/MultiRegisters/inst_Mram_mem4/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<13>/ID/MultiRegisters/inst_Mram_mem13/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<5>/ID/MultiRegisters/inst_Mram_mem5/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<14>/ID/MultiRegisters/inst_Mram_mem14/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<22>/ID/MultiRegisters/inst_Mram_mem22/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<6>/ID/MultiRegisters/inst_Mram_mem6/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<7>/ID/MultiRegisters/inst_Mram_mem7/DP.F> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<15>/ID/MultiRegisters/inst_Mram_mem15/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ID/MultiRegisters/_varindex0000<23>/ID/MultiRegisters/inst_Mram_mem23/DP.F>
+   is incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:863 - The following Virtex BUFG(s) is/are being retargeted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFG symbol "IF/PC_in_not0001_BUFG" (output signal=IF/PC_in_not0001),
+   BUFGP symbol "clk_BUFGP" (output signal=clk_BUFGP)
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   4 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		DataRAM/GND
+VCC 		DataRAM/VCC
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| ALUResult<0>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<1>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<2>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<3>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<4>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<5>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<6>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<7>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<8>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<9>                       | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<10>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<11>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<12>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<13>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<14>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<15>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<16>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<17>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<18>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<19>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<20>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<21>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<22>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<23>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<24>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<25>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<26>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<27>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<28>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<29>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<30>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALUResult<31>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<0>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<1>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<2>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<3>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<4>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<5>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<6>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<7>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<8>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<9>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<10>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<11>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<12>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<13>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<14>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<15>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<16>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<17>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<18>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<19>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<20>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<21>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<22>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<23>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<24>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<25>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<26>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<27>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<28>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<29>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<30>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_A<31>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<0>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<1>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<2>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<3>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<4>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<5>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<6>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<7>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<8>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<9>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<10>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<11>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<12>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<13>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<14>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<15>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<16>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<17>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<18>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<19>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<20>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<21>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<22>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<23>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<24>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<25>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<26>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<27>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<28>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<29>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<30>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| ALU_B<31>                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<0>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<1>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<2>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<3>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<4>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<5>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<6>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<7>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<8>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<9>                  | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<10>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<11>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<12>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<13>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<14>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<15>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<16>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<17>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<18>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<19>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<20>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<21>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<22>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<23>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<24>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<25>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<26>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<27>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<28>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<29>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<30>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Instruction_id<31>                 | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| JumpFlag<0>                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| JumpFlag<1>                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| JumpFlag<2>                        | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<0>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<1>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<2>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<3>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<4>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<5>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<6>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<7>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<8>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<9>                      | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<10>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<11>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<12>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<13>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<14>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<15>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<16>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<17>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<18>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<19>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<20>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<21>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<22>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<23>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<24>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<25>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<26>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<27>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<28>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<29>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<30>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| MemDout_wb<31>                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<0>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<1>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<2>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<3>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<4>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<5>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<6>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<7>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<8>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<9>                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<10>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<11>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<12>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<13>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<14>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<15>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<16>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<17>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<18>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<19>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<20>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<21>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<22>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<23>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<24>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<25>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<26>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<27>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<28>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<29>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<30>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| PC<31>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| Stall                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| clk                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| reset                              | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.

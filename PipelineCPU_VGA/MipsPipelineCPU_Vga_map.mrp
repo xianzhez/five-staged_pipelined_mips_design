@@ -1,0 +1,478 @@
+Release 9.2i Map J.36
+Xilinx Mapping Report File for Design 'MipsPipelineCPU_Vga'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx92i\bin\nt\map.exe -ise
+E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise -intstyle ise -p
+xc2vp30-ff896-7 -cm area -pr b -k 4 -c 100 -tx off -o
+MipsPipelineCPU_Vga_map.ncd MipsPipelineCPU_Vga.ngd MipsPipelineCPU_Vga.pcf 
+Target Device  : xc2vp30
+Target Package : ff896
+Target Speed   : -7
+Mapper Version : virtex2p -- $Revision: 1.36 $
+Mapped Date    : Sat Dec 28 13:36:25 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   68
+Logic Utilization:
+  Total Number Slice Registers:       322 out of  27,392    1%
+    Number used as Flip Flops:                   314
+    Number used as Latches:                        8
+  Number of 4 input LUTs:           1,693 out of  27,392    6%
+Logic Distribution:
+  Number of occupied Slices:        1,087 out of  13,696    7%
+  Number of Slices containing only related logic:   1,087 out of   1,087  100%
+  Number of Slices containing unrelated logic:          0 out of   1,087    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          1,987 out of  27,392    7%
+  Number used as logic:             1,693
+  Number used as a route-thru:         37
+  Number used for Dual Port RAMs:     256
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:       1
+
+  Number of bonded IOBs:               35 out of     556    6%
+    IOB Flip Flops:                     2
+  Number of PPC405s:                   0 out of       2    0%
+  Number of Block RAMs:                 2 out of     136    1%
+  Number of GCLKs:                      4 out of      16   25%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  177,638
+Additional JTAG gate count for IOBs:  1,680
+Peak Memory Usage:  198 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network cpu_inst/ID/MultiRegisters/inst_Mram_mem63/SPO
+   has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 63
+   more times for the following (max. 5 shown):
+   cpu_inst/ID/MultiRegisters/inst_Mram_mem62/SPO,
+   cpu_inst/ID/MultiRegisters/inst_Mram_mem61/SPO,
+   cpu_inst/ID/MultiRegisters/inst_Mram_mem60/SPO,
+   cpu_inst/ID/MultiRegisters/inst_Mram_mem59/SPO,
+   cpu_inst/ID/MultiRegisters/inst_Mram_mem58/SPO
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:Pack:266 - The function generator cpu_inst/EX/ALU/Result<4>11 failed to
+   merge with F5 multiplexer cpu_inst/EX/ALU/Result<2>128_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net cpu_inst/IF/PC_in_not0001
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<9>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem9/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<17>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem17/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<1>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem1/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<0>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<8>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem8/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<16>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem16/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<7>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem7/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<31>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem63/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<6>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem6/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<30>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem62/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<29>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem61/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<28>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem60/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<27>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem59/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<26>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem58/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<25>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem57/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<24>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem56/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<23>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem55/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<22>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem54/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<21>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem53/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<13>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem45/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<20>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem52/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<12>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem44/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<19>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem51/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<11>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem43/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<3>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem35/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<18>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem50/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<10>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem42/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<2>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem34/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<9>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem41/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<1>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem33/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<25>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem25/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<17>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem49/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<8>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem40/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<0>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem32/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<24>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem24/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<16>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem48/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<31>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem31/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<23>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem23/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<15>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem15/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<15>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem47/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<7>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem39/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<30>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem30/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<22>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem22/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<14>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem14/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<14>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem46/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<6>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem38/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<21>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem21/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<13>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem13/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<5>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem5/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<5>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem37/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<29>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem29/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<20>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem20/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<12>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem12/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<4>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem4/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0001<4>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem36/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<28>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem28/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<11>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem11/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<3>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem3/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<27>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem27/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<19>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem19/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<10>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem10/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<26>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem26/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<18>/cpu_inst/ID/MultiRegisters/inst
+   _Mram_mem18/DP.F> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cpu_inst/ID/MultiRegisters/_varindex0000<2>/cpu_inst/ID/MultiRegisters/inst_
+   Mram_mem2/DP.F> is incomplete. The signal does not drive any load pins in the
+   design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:863 - The following Virtex BUFG(s) is/are being retargeted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFG symbol "CLKgen/counter_0_BUFG" (output signal=CLKgen/counter<0>),
+   BUFG symbol "CLKgen/counter_1_BUFG" (output signal=CLKgen/counter<1>),
+   BUFGP symbol "clk_BUFGP" (output signal=clk_BUFGP),
+   BUFG symbol "cpu_clk_BUFG" (output signal=cpu_clk)
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   7 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		cpu_inst/DataRAM/GND
+VCC 		cpu_inst/DataRAM/VCC
+GND 		disp/char_tab/GND
+VCC 		disp/char_tab/VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| blank                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<0>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<1>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<2>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<3>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<4>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<5>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<6>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| blue<7>                            | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| clk                                | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| green<0>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<1>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<2>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<3>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<4>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<5>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<6>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| green<7>                           | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| hsync                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
+| pixel_clk                          | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<0>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<1>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<2>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<3>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<4>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<5>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<6>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| red<7>                             | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| reset_n                            | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| reset_n_vga                        | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| run_mode                           | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| step                               | IOB     | INPUT     | LVCMOS25    |          |      |          |          |       |
+| vga_comp_synch                     | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| vga_out_blank_z                    | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW |          |          |       |
+| vsync                              | IOB     | OUTPUT    | LVCMOS25    | 12       | SLOW | OFF1     |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.

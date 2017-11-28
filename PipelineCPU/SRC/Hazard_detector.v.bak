@@ -1,0 +1,29 @@
+module Hazard_detector(
+	MemRead_ex,RegWriteAddr_ex,RsAddr_id,RtAddr_id,stall,PC_IFWrite);
+	
+	input		MemRead_ex;
+	input	 [4:0] RegWriteAddr_ex;
+	input	 [4:0] RsAddr_id;
+	input	 [4:0] RtAddr_id;
+//	output	reg stall=0;
+//	output	reg PC_IFWrite=1;
+	output	stall;
+	output  PC_IFWrite;	
+	
+//	reg x;
+	assign stall=MemRead_ex&&((RegWriteAddr_ex==RsAddr_id)||(RegWriteAddr_ex==RtAddr_id));  //Judge hazard
+	assign PC_IFWrite=~stall;
+//	always @(*)
+//		begin
+//			x=MemRead_ex&&((RegWriteAddr_ex==RsAddr_id)||(RegWriteAddr_ex==RsAddr_id));  //Judge hazard
+//			if(x)
+//				begin
+//					stall=x;											//stall=1
+//					PC_IFWrite=~stall;						//PC_IFWrite=0
+//				end
+//		end
+
+
+endmodule
+	
+	

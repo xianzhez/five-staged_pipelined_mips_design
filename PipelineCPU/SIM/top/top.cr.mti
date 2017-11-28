@@ -1,0 +1,131 @@
+E:/31101008121220/lab28/PipelineCPU/SRC/ID.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/ID.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ID
+
+Top level modules:
+	ID
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/EX.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/EX.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module EX
+
+Top level modules:
+	EX
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/adder_32bits.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/adder_32bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_32bits
+
+Top level modules:
+	adder_32bits
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/IF.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/IF.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module IF
+
+Top level modules:
+	IF
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/InstructionROM.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/InstructionROM.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module InstructionROM
+
+Top level modules:
+	InstructionROM
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SIM/top1221/top_tb.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SIM/top1221/top_tb.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module top_tb_v
+
+Top level modules:
+	top_tb_v
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/mux_adder.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/mux_adder.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module mux_adder
+
+Top level modules:
+	mux_adder
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/RsSel_RtSel.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/RsSel_RtSel.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module RsSel_RtSel
+
+Top level modules:
+	RsSel_RtSel
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/DataRAM.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/DataRAM.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DataRAM
+
+Top level modules:
+	DataRAM
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/ALU.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/ALU.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/Hazard_detector.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/Hazard_detector.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Hazard_detector
+
+Top level modules:
+	Hazard_detector
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/Decode.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/Decode.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Decode
+
+Top level modules:
+	Decode
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/adder_4bits.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/adder_4bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_4bits
+
+Top level modules:
+	adder_4bits
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/MipsPipelineCPU.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/MipsPipelineCPU.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module MipsPipelineCPU
+
+Top level modules:
+	MipsPipelineCPU
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/Zero_test.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/Zero_test.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Zero_test
+
+Top level modules:
+	Zero_test
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/Registers.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/Registers.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Registers
+
+Top level modules:
+	Registers
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/full_adder.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/full_adder.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} E:/31101008121220/lab28/PipelineCPU/SRC/ff_lib.v {1 {vlog -work work -vopt -nocovercells E:/31101008121220/lab28/PipelineCPU/SRC/ff_lib.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module dff
+-- Compiling module dffr
+-- Compiling module dffre
+
+Top level modules:
+	dff
+	dffr
+	dffre
+
+} {} {}}

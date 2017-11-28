@@ -1,0 +1,5 @@
+xst -ise "E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc2vp30-ff896-7 "MipsPipelineCPU.ngc" MipsPipelineCPU.ngd
+map -ise "E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise" -intstyle ise -p xc2vp30-ff896-7 -cm area -pr b -k 4 -c 100 -tx off -o MipsPipelineCPU_map.ncd MipsPipelineCPU.ngd MipsPipelineCPU.pcf
+par -ise "E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise" -w -intstyle ise -ol std -t 1 MipsPipelineCPU_map.ncd MipsPipelineCPU.ncd MipsPipelineCPU.pcf
+trce -ise "E:/31101008121220/lab28/PipelineCPU/ISE/MipsPipelineCPU.ise" -intstyle ise -e 3 -s 7 -xml MipsPipelineCPU MipsPipelineCPU.ncd -o MipsPipelineCPU.twr MipsPipelineCPU.pcf

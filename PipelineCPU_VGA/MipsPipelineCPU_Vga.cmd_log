@@ -1,0 +1,16 @@
+xst -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU_Vga.xst -ofn MipsPipelineCPU_Vga.syr
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+netgen -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim MipsPipelineCPU_Vga.ngc MipsPipelineCPU_Vga_synthesis.v
+xst -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU_Vga.xst -ofn MipsPipelineCPU_Vga.syr
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+netgen -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim MipsPipelineCPU_Vga.ngc MipsPipelineCPU_Vga_synthesis.v
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+xst -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU_Vga.xst -ofn MipsPipelineCPU_Vga.syr
+netgen -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim MipsPipelineCPU_Vga.ngc MipsPipelineCPU_Vga_synthesis.v
+ngdbuild -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "MipsPipelineCPU.ucf" -p xc2vp30-ff896-7 "MipsPipelineCPU_Vga.ngc" MipsPipelineCPU_Vga.ngd
+map -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -p xc2vp30-ff896-7 -cm area -pr b -k 4 -c 100 -tx off -o MipsPipelineCPU_Vga_map.ncd MipsPipelineCPU_Vga.ngd MipsPipelineCPU_Vga.pcf
+par -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -w -intstyle ise -ol std -t 1 MipsPipelineCPU_Vga_map.ncd MipsPipelineCPU_Vga.ncd MipsPipelineCPU_Vga.pcf
+trce -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -e 3 -s 7 -xml MipsPipelineCPU_Vga MipsPipelineCPU_Vga.ncd -o MipsPipelineCPU_Vga.twr MipsPipelineCPU_Vga.pcf -ucf MipsPipelineCPU.ucf
+bitgen -ise "E:/31101008121220/lab28/PipelineCPU_VGA/PipelineCPU.ise" -intstyle ise -f MipsPipelineCPU_Vga.ut MipsPipelineCPU_Vga.ncd

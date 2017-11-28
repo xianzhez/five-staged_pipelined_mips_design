@@ -1,0 +1,1260 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: MipsPipelineCPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MipsPipelineCPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MipsPipelineCPU"
+Output Format                      : NGC
+Target Device                      : xc2vp30-7-ff896
+
+---- Source Options
+Top Module Name                    : MipsPipelineCPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : MipsPipelineCPU.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../SRC/full_adder.v" in library work
+Compiling verilog file "../SRC/adder_4bits.v" in library work
+Module <full_adder> compiled
+Compiling verilog file "../SRC/mux_adder.v" in library work
+Module <adder_4bits> compiled
+Compiling verilog file "../SRC/adder_32bits.v" in library work
+Module <mux_adder> compiled
+Compiling verilog file "../SRC/ff_lib.v" in library work
+Module <adder_32bits> compiled
+Module <dff> compiled
+Module <dffr> compiled
+Compiling verilog file "../SRC/Zero_test.v" in library work
+Module <dffre> compiled
+Compiling verilog file "../SRC/RsSel_RtSel.v" in library work
+Module <Zero_test> compiled
+Compiling verilog file "../SRC/Registers.v" in library work
+Module <RsSel_RtSel> compiled
+Compiling verilog file "../SRC/InstructionROM.v" in library work
+Module <Registers> compiled
+Compiling verilog file "../SRC/Hazard_detector.v" in library work
+Module <InstructionROM> compiled
+Compiling verilog file "../SRC/Decode.v" in library work
+Module <Hazard_detector> compiled
+Compiling verilog file "../SRC/ALU.v" in library work
+Module <Decode> compiled
+Compiling verilog file "../SRC/IF.v" in library work
+Module <ALU> compiled
+Compiling verilog file "../SRC/ID.v" in library work
+Module <IF> compiled
+Compiling verilog file "../SRC/EX.v" in library work
+Module <ID> compiled
+Compiling verilog file "../SRC/DataRAM.v" in library work
+Module <EX> compiled
+Compiling verilog file "../SRC/MipsPipelineCPU.v" in library work
+Module <DataRAM> compiled
+Module <MipsPipelineCPU> compiled
+No errors in compilation
+Analysis of file <"MipsPipelineCPU.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <MipsPipelineCPU> in library <work>.
+
+Analyzing hierarchy for module <IF> in library <work>.
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <ID> in library <work> with parameters.
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <EX> in library <work>.
+
+Analyzing hierarchy for module <dffr> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <InstructionROM> in library <work>.
+
+Analyzing hierarchy for module <Zero_test> in library <work> with parameters.
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+
+Analyzing hierarchy for module <Hazard_detector> in library <work>.
+
+Analyzing hierarchy for module <Decode> in library <work> with parameters.
+	ADDIU_op = "001001"
+	ADDI_op = "001000"
+	ADDU_funct = "100001"
+	ADD_funct = "100000"
+	ANDI_op = "001100"
+	AND_funct = "100100"
+	BEQ_op = "000100"
+	BGEZ_op = "000001"
+	BGEZ_rt = "00001"
+	BGTZ_op = "000111"
+	BGTZ_rt = "00000"
+	BLEZ_op = "000110"
+	BLEZ_rt = "00000"
+	BLTZ_op = "000001"
+	BLTZ_rt = "00000"
+	BNE_op = "000101"
+	JR_funct = "001000"
+	J_op = "000010"
+	LW_op = "100011"
+	NOR_funct = "100111"
+	ORI_op = "001101"
+	OR_funct = "100101"
+	R_type_op = "000000"
+	SLLV_funct = "000100"
+	SLL_funct = "000000"
+	SLTIU_op = "001011"
+	SLTI_op = "001010"
+	SLTU_funct = "101011"
+	SLT_funct = "101010"
+	SRAV_funct = "000111"
+	SRA_funct = "000011"
+	SRLV_funct = "000110"
+	SRL_funct = "000010"
+	SUBU_funct = "100011"
+	SUB_funct = "100010"
+	SW_op = "101011"
+	XORI_op = "001110"
+	XOR_funct = "100110"
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <Registers> in library <work>.
+
+Analyzing hierarchy for module <RsSel_RtSel> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work> with parameters.
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <MipsPipelineCPU>.
+Module <MipsPipelineCPU> is correct for synthesis.
+ 
+Analyzing module <IF> in library <work>.
+Module <IF> is correct for synthesis.
+ 
+Analyzing module <adder_32bits> in library <work>.
+Module <adder_32bits> is correct for synthesis.
+ 
+Analyzing module <adder_4bits> in library <work>.
+Module <adder_4bits> is correct for synthesis.
+ 
+Analyzing module <full_adder> in library <work>.
+Module <full_adder> is correct for synthesis.
+ 
+Analyzing module <mux_adder> in library <work>.
+Module <mux_adder> is correct for synthesis.
+ 
+Analyzing module <InstructionROM> in library <work>.
+Module <InstructionROM> is correct for synthesis.
+ 
+Analyzing module <dffre> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000100000
+Module <dffre> is correct for synthesis.
+ 
+Analyzing module <ID> in library <work>.
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+Module <ID> is correct for synthesis.
+ 
+Analyzing module <Zero_test> in library <work>.
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+Module <Zero_test> is correct for synthesis.
+ 
+Analyzing module <Hazard_detector> in library <work>.
+Module <Hazard_detector> is correct for synthesis.
+ 
+Analyzing module <Decode> in library <work>.
+	ADDIU_op = 6'b001001
+	ADDI_op = 6'b001000
+	ADDU_funct = 6'b100001
+	ADD_funct = 6'b100000
+	ANDI_op = 6'b001100
+	AND_funct = 6'b100100
+	BEQ_op = 6'b000100
+	BGEZ_op = 6'b000001
+	BGEZ_rt = 5'b00001
+	BGTZ_op = 6'b000111
+	BGTZ_rt = 5'b00000
+	BLEZ_op = 6'b000110
+	BLEZ_rt = 5'b00000
+	BLTZ_op = 6'b000001
+	BLTZ_rt = 5'b00000
+	BNE_op = 6'b000101
+	JR_funct = 6'b001000
+	J_op = 6'b000010
+	LW_op = 6'b100011
+	NOR_funct = 6'b100111
+	ORI_op = 6'b001101
+	OR_funct = 6'b100101
+	R_type_op = 6'b000000
+	SLLV_funct = 6'b000100
+	SLL_funct = 6'b000000
+	SLTIU_op = 6'b001011
+	SLTI_op = 6'b001010
+	SLTU_funct = 6'b101011
+	SLT_funct = 6'b101010
+	SRAV_funct = 6'b000111
+	SRA_funct = 6'b000011
+	SRLV_funct = 6'b000110
+	SRL_funct = 6'b000010
+	SUBU_funct = 6'b100011
+	SUB_funct = 6'b100010
+	SW_op = 6'b101011
+	XORI_op = 6'b001110
+	XOR_funct = 6'b100110
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+WARNING:Xst:883 - "../SRC/Decode.v" line 262: Ignored duplicate item in case statement. 
+WARNING:Xst:2725 - "../SRC/Decode.v" line 264: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../SRC/Decode.v" line 265: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../SRC/Decode.v" line 269: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../SRC/Decode.v" line 270: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../SRC/Decode.v" line 271: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "../SRC/Decode.v" line 272: Size mismatch between case item and case selector.
+Module <Decode> is correct for synthesis.
+ 
+Analyzing module <Registers> in library <work>.
+Module <Registers> is correct for synthesis.
+ 
+Analyzing module <RsSel_RtSel> in library <work>.
+Module <RsSel_RtSel> is correct for synthesis.
+ 
+Analyzing module <dffr.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffr.1> is correct for synthesis.
+ 
+Analyzing module <dffr.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <dffr.2> is correct for synthesis.
+ 
+Analyzing module <dffr.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000100000
+Module <dffr.3> is correct for synthesis.
+ 
+Analyzing module <dffr.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000101
+Module <dffr.4> is correct for synthesis.
+ 
+Analyzing module <EX> in library <work>.
+Module <EX> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <dffr.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffr.5> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dffre>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <dffre> synthesized.
+
+
+Synthesizing Unit <dffr_1>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffr_1> synthesized.
+
+
+Synthesizing Unit <dffr_2>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <dffr_2> synthesized.
+
+
+Synthesizing Unit <dffr_3>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <dffr_3> synthesized.
+
+
+Synthesizing Unit <dffr_4>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 5-bit register for signal <q>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <dffr_4> synthesized.
+
+
+Synthesizing Unit <dffr_5>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffr_5> synthesized.
+
+
+Synthesizing Unit <InstructionROM>.
+    Related source file is "../SRC/InstructionROM.v".
+    Found 16x32-bit ROM for signal <dout$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <InstructionROM> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "../SRC/full_adder.v".
+    Found 1-bit xor3 for signal <s>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <Zero_test>.
+    Related source file is "../SRC/Zero_test.v".
+    Found 1-bit xor2 for signal <Z$xor0000>.
+    Found 1-bit xor2 for signal <Z$xor0001>.
+    Found 1-bit xor2 for signal <Z$xor0002>.
+    Found 1-bit xor2 for signal <Z$xor0003>.
+    Found 1-bit xor2 for signal <Z$xor0004>.
+    Found 1-bit xor2 for signal <Z$xor0005>.
+    Found 1-bit xor2 for signal <Z$xor0006>.
+    Found 1-bit xor2 for signal <Z$xor0007>.
+    Found 1-bit xor2 for signal <Z$xor0008>.
+    Found 1-bit xor2 for signal <Z$xor0009>.
+    Found 1-bit xor2 for signal <Z$xor0010>.
+    Found 1-bit xor2 for signal <Z$xor0011>.
+    Found 1-bit xor2 for signal <Z$xor0012>.
+    Found 1-bit xor2 for signal <Z$xor0013>.
+    Found 1-bit xor2 for signal <Z$xor0014>.
+    Found 1-bit xor2 for signal <Z$xor0015>.
+    Found 1-bit xor2 for signal <Z$xor0016>.
+    Found 1-bit xor2 for signal <Z$xor0017>.
+    Found 1-bit xor2 for signal <Z$xor0018>.
+    Found 1-bit xor2 for signal <Z$xor0019>.
+    Found 1-bit xor2 for signal <Z$xor0020>.
+    Found 1-bit xor2 for signal <Z$xor0021>.
+    Found 1-bit xor2 for signal <Z$xor0022>.
+    Found 1-bit xor2 for signal <Z$xor0023>.
+    Found 1-bit xor2 for signal <Z$xor0024>.
+    Found 1-bit xor2 for signal <Z$xor0025>.
+    Found 1-bit xor2 for signal <Z$xor0026>.
+    Found 1-bit xor2 for signal <Z$xor0027>.
+    Found 1-bit xor2 for signal <Z$xor0028>.
+    Found 1-bit xor2 for signal <Z$xor0029>.
+    Found 1-bit xor2 for signal <Z$xor0030>.
+    Found 1-bit xor2 for signal <Z$xor0031>.
+Unit <Zero_test> synthesized.
+
+
+Synthesizing Unit <Hazard_detector>.
+    Related source file is "../SRC/Hazard_detector.v".
+    Found 5-bit comparator equal for signal <stall$cmp_eq0000> created at line 14.
+    Found 5-bit comparator equal for signal <stall$cmp_eq0001> created at line 14.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <Hazard_detector> synthesized.
+
+
+Synthesizing Unit <Decode>.
+    Related source file is "../SRC/Decode.v".
+WARNING:Xst:646 - Signal <Branch> is assigned but never used.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0006>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0007>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0012>.
+    Found 6-bit comparator equal for signal <ALUCode$cmp_eq0013>.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <Decode> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "../SRC/Registers.v".
+    Found 32x32-bit dual-port RAM <Mram_regs> for signal <regs>.
+    Found 32x32-bit dual-port RAM <Mram_regs_ren> for signal <regs>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <RsSel_RtSel>.
+    Related source file is "../SRC/RsSel_RtSel.v".
+    Found 5-bit comparator equal for signal <RsSel$cmp_eq0001> created at line 19.
+    Found 5-bit comparator equal for signal <RtSel$cmp_eq0000> created at line 20.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <RsSel_RtSel> synthesized.
+
+
+Synthesizing Unit <adder_4bits>.
+    Related source file is "../SRC/adder_4bits.v".
+Unit <adder_4bits> synthesized.
+
+
+Synthesizing Unit <mux_adder>.
+    Related source file is "../SRC/mux_adder.v".
+Unit <mux_adder> synthesized.
+
+
+Synthesizing Unit <adder_32bits>.
+    Related source file is "../SRC/adder_32bits.v".
+Unit <adder_32bits> synthesized.
+
+
+Synthesizing Unit <IF>.
+    Related source file is "../SRC/IF.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <PC_in>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <IF> synthesized.
+
+
+Synthesizing Unit <ID>.
+    Related source file is "../SRC/ID.v".
+Unit <ID> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "../SRC/ALU.v".
+WARNING:Xst:646 - Signal <Binvert> is assigned but never used.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit adder for signal <B_adder$addsub0000> created at line 83.
+    Found 1-bit xor2 for signal <overflow$xor0000> created at line 113.
+    Found 32-bit shifter logical left for signal <Result$shift0003> created at line 106.
+    Found 32-bit shifter logical right for signal <Result$shift0004> created at line 107.
+    Found 32-bit shifter arithmetic right for signal <Result$shift0005> created at line 108.
+    Found 1-bit xor2 for signal <Result$xor0000> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0001> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0002> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0003> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0004> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0005> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0006> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0007> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0008> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0009> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0010> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0011> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0012> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0013> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0014> created at line 103.
+    Found 1-bit xor2 for signal <Result$xor0015> created at line 103.
+    Found 32-bit xor2 for signal <Result$xor0016> created at line 98.
+    Found 1-bit xor2 for signal <Result$xor0017>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <EX>.
+    Related source file is "../SRC/EX.v".
+    Found 32-bit 4-to-1 multiplexer for signal <A>.
+    Found 32-bit 4-to-1 multiplexer for signal <B>.
+    Found 5-bit comparator equal for signal <ForwardA_0$cmp_eq0000> created at line 51.
+    Found 5-bit comparator not equal for signal <ForwardA_0$cmp_ne0001> created at line 51.
+    Found 5-bit comparator equal for signal <ForwardA_1$cmp_eq0000> created at line 55.
+    Found 5-bit comparator equal for signal <ForwardB_0$cmp_eq0000> created at line 57.
+    Found 5-bit comparator not equal for signal <ForwardB_0$cmp_ne0000> created at line 57.
+    Found 5-bit comparator equal for signal <ForwardB_1$cmp_eq0000> created at line 58.
+    Summary:
+	inferred   6 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <EX> synthesized.
+
+
+Synthesizing Unit <MipsPipelineCPU>.
+    Related source file is "../SRC/MipsPipelineCPU.v".
+Unit <MipsPipelineCPU> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 21
+ 1-bit register                                        : 1
+ 2-bit register                                        : 4
+ 32-bit register                                       : 10
+ 5-bit register                                        : 5
+ 8-bit register                                        : 1
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 14
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator equal                                : 4
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 231
+ 1-bit xor2                                            : 50
+ 1-bit xor3                                            : 180
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx92i.
+Reading core <DataRAM.ngc>.
+Loading core <DataRAM> for timing and area information for instance <DataRAM>.
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RsAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RtAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+WARNING:Xst:1710 - FF/Latch  <q_31> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_30> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_29> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_28> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_27> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_26> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_25> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_24> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_23> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_22> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_21> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_20> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_19> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_18> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_17> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_16> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_15> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_14> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_13> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_12> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_11> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_10> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_9> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_8> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_7> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_6> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+WARNING:Xst:1710 - FF/Latch  <q_5> (without init value) has a constant value of 0 in block <dffr_IDEX_Sa>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port distributed RAM                   : 2
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 362
+ Flip-Flops                                            : 362
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 14
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator equal                                : 4
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 231
+ 1-bit xor2                                            : 50
+ 1-bit xor3                                            : 180
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: Result_shift0002<31>.
+
+Optimizing unit <MipsPipelineCPU> ...
+
+Optimizing unit <dffre> ...
+
+Optimizing unit <dffr_3> ...
+
+Optimizing unit <Decode> ...
+
+Optimizing unit <Registers> ...
+
+Optimizing unit <IF> ...
+
+Optimizing unit <ID> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <EX> ...
+WARNING:Xst:1710 - FF/Latch  <dffr_IDEX_Sa/q_21> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_19> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_18> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_17> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_16> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_15> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_14> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_13> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_12> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_11> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_10> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_9> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_8> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_7> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_6> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_5> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffre_IFID_Instruction/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffre_IFID_Instruction/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffre_IFID_Instruction/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffre_IFID_Instruction/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_31> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_29> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_28> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_27> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_26> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_24> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_Sa/q_22> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_RsAddr/q_2> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_RsAddr/q_4> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <dffr_IDEX_RtAddr/q_4> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_Imm/q_8> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Sa/q_2> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_1> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_12> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_Imm/q_6> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Sa/q_0> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_4> in Unit <MipsPipelineCPU> is equivalent to the following 17 FFs/Latches, which will be removed : <dffr_IDEX_Imm/q_31> <dffr_IDEX_Imm/q_30> <dffr_IDEX_Imm/q_29> <dffr_IDEX_Imm/q_28> <dffr_IDEX_Imm/q_27> <dffr_IDEX_Imm/q_26> <dffr_IDEX_Imm/q_25> <dffr_IDEX_Imm/q_24> <dffr_IDEX_Imm/q_23> <dffr_IDEX_Imm/q_22> <dffr_IDEX_Imm/q_21> <dffr_IDEX_Imm/q_20> <dffr_IDEX_Imm/q_19> <dffr_IDEX_Imm/q_18> <dffr_IDEX_Imm/q_17> <dffr_IDEX_Imm/q_16> <dffr_IDEX_Imm/q_15> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_M/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_WB/q_1> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_11> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_Imm/q_7> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Sa/q_1> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_2> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_13> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_3> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_14> 
+INFO:Xst:2261 - The FF/Latch <dffre_IFID_Instruction/q_15> in Unit <MipsPipelineCPU> is equivalent to the following 5 FFs/Latches, which will be removed : <dffre_IFID_Instruction/q_13> <dffre_IFID_Instruction/q_10> <dffre_IFID_Instruction/q_9> <dffre_IFID_Instruction/q_8> <dffre_IFID_Instruction/q_4> 
+INFO:Xst:2261 - The FF/Latch <dffre_IFID_Instruction/q_12> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffre_IFID_Instruction/q_5> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_Imm/q_10> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Sa/q_4> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_Imm/q_9> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Sa/q_3> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_4> in Unit <MipsPipelineCPU> is equivalent to the following 4 FFs/Latches, which will be removed : <dffr_IDEX_RdAddr/q_2> <dffr_IDEX_Imm/q_10> <dffr_IDEX_Imm/q_9> <dffr_IDEX_Imm/q_8> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_1> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_5> 
+INFO:Xst:2261 - The FF/Latch <dffr_IDEX_RdAddr/q_4> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <dffr_IDEX_Imm/q_4> 
+Found area constraint ratio of 100 (+ 5) on block MipsPipelineCPU, actual ratio is 7.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_3> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_2> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_3> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_3> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_0_32> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_1_32> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_18> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_3_32> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_18> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <dffr_MEMWB_RegWriteAddr/q_2_32> of sequential type is unconnected in block <MipsPipelineCPU>.
+FlipFlop dffr_EXMEM_RegWriteAddr/q_0 has been replicated 2 time(s)
+FlipFlop dffr_EXMEM_RegWriteAddr/q_1 has been replicated 1 time(s)
+FlipFlop dffr_EXMEM_RegWriteAddr/q_2 has been replicated 1 time(s)
+FlipFlop dffr_EXMEM_RegWriteAddr/q_3 has been replicated 2 time(s)
+FlipFlop dffr_MEMWB_RegWriteAddr/q_0 has been replicated 32 time(s)
+FlipFlop dffr_MEMWB_RegWriteAddr/q_1 has been replicated 32 time(s)
+FlipFlop dffr_MEMWB_RegWriteAddr/q_2 has been replicated 32 time(s)
+FlipFlop dffr_MEMWB_RegWriteAddr/q_3 has been replicated 32 time(s)
+FlipFlop dffr_MEMWB_RegWriteAddr/q_4 has been replicated 1 time(s)
+FlipFlop dffr_MEMWB_WB/q_0 has been replicated 1 time(s)
+FlipFlop dffr_MEMWB_WB/q_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 312
+ Flip-Flops                                            : 312
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MipsPipelineCPU.ngr
+Top Level Output File Name         : MipsPipelineCPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 198
+
+Cell Usage :
+# BELS                             : 1887
+#      GND                         : 2
+#      INV                         : 1
+#      LUT2                        : 86
+#      LUT2_D                      : 13
+#      LUT2_L                      : 8
+#      LUT3                        : 413
+#      LUT3_D                      : 67
+#      LUT3_L                      : 64
+#      LUT4                        : 812
+#      LUT4_D                      : 79
+#      LUT4_L                      : 113
+#      MUXCY                       : 38
+#      MUXF5                       : 158
+#      VCC                         : 2
+#      XORCY                       : 31
+# FlipFlops/Latches                : 344
+#      FDR                         : 222
+#      FDRE                        : 86
+#      FDRS                        : 4
+#      LD                          : 32
+# RAMS                             : 65
+#      RAM32X1D                    : 64
+#      RAMB16_S36                  : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 197
+#      IBUF                        : 1
+#      OBUF                        : 196
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     987  out of  13696     7%  
+ Number of Slice Flip Flops:           344  out of  27392     1%  
+ Number of 4 input LUTs:              1912  out of  27392     6%  
+    Number used as logic:             1656
+    Number used as RAMs:               256
+ Number of IOs:                        198
+ Number of bonded IOBs:                198  out of    556    35%  
+ Number of BRAMs:                        1  out of    136     0%  
+ Number of GCLKs:                        2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)  | Load  |
+--------------------------------------+------------------------+-------+
+clk                                   | BUFGP                  | 376   |
+IF/PC_in_not00011(IF/PC_in_not00011:O)| BUFG(*)(IF/PC_in_14)   | 32    |
+--------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 11.024ns (Maximum Frequency: 90.714MHz)
+   Minimum input arrival time before clock: 3.408ns
+   Maximum output required time after clock: 13.786ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.024ns (frequency: 90.714MHz)
+  Total number of paths / destination ports: 2680920 / 1188
+-------------------------------------------------------------------------
+Delay:               11.024ns (Levels of Logic = 15)
+  Source:            dffr_MEMWB_RegWriteAddr/q_1_1 (FF)
+  Destination:       dffr_EXMEM_ALUResult/q_25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: dffr_MEMWB_RegWriteAddr/q_1_1 to dffr_EXMEM_ALUResult/q_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.370   0.467  dffr_MEMWB_RegWriteAddr/q_1_1 (dffr_MEMWB_RegWriteAddr/q_1_1)
+     LUT2_L:I0->LO         1   0.275   0.118  EX/ForwardA_0_and0000_SW0 (N9302)
+     LUT4:I2->O            8   0.275   0.576  EX/ForwardA_0_and0000 (EX/ForwardA_0_and0000)
+     LUT4:I1->O           14   0.275   0.570  EX/Mmux_B_not000190_1 (EX/Mmux_B_not000190)
+     LUT3:I2->O            3   0.275   0.415  EX/Mmux_B1_SW2 (N9522)
+     LUT3:I2->O           11   0.275   0.000  EX/ALU_B<0>1 (ALU_B_0_OBUF)
+     MUXCY:S->O            1   0.334   0.000  EX/ALU/Madd_B_adder_addsub0000_cy<0> (EX/ALU/Madd_B_adder_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.708   0.378  EX/ALU/Madd_B_adder_addsub0000_xor<1> (EX/ALU/B_adder_addsub0000<1>)
+     MUXF5:S->O            2   0.539   0.396  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst1/co (EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<2>)
+     LUT3:I2->O            3   0.275   0.415  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst2/co (EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<3>)
+     LUT3:I2->O            4   0.275   0.431  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst3/co (EX/ALU/adder_32bits_ALU/cio<0>)
+     LUT4:I2->O            5   0.275   0.446  EX/ALU/adder_32bits_ALU/mux_adder_inst1/co27 (EX/ALU/adder_32bits_ALU/cio<1>)
+     LUT4:I2->O            6   0.275   0.463  EX/ALU/adder_32bits_ALU/mux_adder_inst2/co27 (EX/ALU/adder_32bits_ALU/cio<2>)
+     LUT4:I2->O           13   0.275   0.540  EX/ALU/adder_32bits_ALU/mux_adder_inst4/co27 (EX/ALU/adder_32bits_ALU/cio<4>)
+     LUT4:I2->O            1   0.275   0.349  EX/ALU/Result<0>277 (EX/ALU/Result<0>_map65)
+     LUT4:I2->O            2   0.275   0.000  EX/ALU/Result<0>342 (ALUResult_0_OBUF)
+     FDR:D                     0.208          dffr_EXMEM_ALUResult/q_0
+    ----------------------------------------
+    Total                     11.024ns (5.459ns logic, 5.565ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 312 / 312
+-------------------------------------------------------------------------
+Offset:              3.408ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       dffr_IDEX_M/q_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to dffr_IDEX_M/q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           168   0.878   0.962  reset_IBUF (reset_IBUF)
+     LUT2:I1->O           92   0.275   0.756  stall_reset1 (stall_reset)
+     FDR:R                     0.536          dffr_IDEX_M/q_0
+    ----------------------------------------
+    Total                      3.408ns (1.689ns logic, 1.719ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2410147 / 160
+-------------------------------------------------------------------------
+Offset:              13.786ns (Levels of Logic = 16)
+  Source:            dffr_MEMWB_RegWriteAddr/q_1_1 (FF)
+  Destination:       ALUResult<25> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dffr_MEMWB_RegWriteAddr/q_1_1 to ALUResult<25>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.370   0.467  dffr_MEMWB_RegWriteAddr/q_1_1 (dffr_MEMWB_RegWriteAddr/q_1_1)
+     LUT2_L:I0->LO         1   0.275   0.118  EX/ForwardA_0_and0000_SW0 (N9302)
+     LUT4:I2->O            8   0.275   0.576  EX/ForwardA_0_and0000 (EX/ForwardA_0_and0000)
+     LUT4:I1->O           14   0.275   0.570  EX/Mmux_B_not000190_1 (EX/Mmux_B_not000190)
+     LUT3:I2->O            3   0.275   0.415  EX/Mmux_B1_SW2 (N9522)
+     LUT3:I2->O           11   0.275   0.000  EX/ALU_B<0>1 (ALU_B_0_OBUF)
+     MUXCY:S->O            1   0.334   0.000  EX/ALU/Madd_B_adder_addsub0000_cy<0> (EX/ALU/Madd_B_adder_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.708   0.378  EX/ALU/Madd_B_adder_addsub0000_xor<1> (EX/ALU/B_adder_addsub0000<1>)
+     MUXF5:S->O            2   0.539   0.396  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst1/co (EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<2>)
+     LUT3:I2->O            3   0.275   0.415  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst2/co (EX/ALU/adder_32bits_ALU/adder_4bits_inst/coi<3>)
+     LUT3:I2->O            4   0.275   0.431  EX/ALU/adder_32bits_ALU/adder_4bits_inst/add_inst3/co (EX/ALU/adder_32bits_ALU/cio<0>)
+     LUT4:I2->O            5   0.275   0.446  EX/ALU/adder_32bits_ALU/mux_adder_inst1/co27 (EX/ALU/adder_32bits_ALU/cio<1>)
+     LUT4:I2->O            6   0.275   0.463  EX/ALU/adder_32bits_ALU/mux_adder_inst2/co27 (EX/ALU/adder_32bits_ALU/cio<2>)
+     LUT4:I2->O           13   0.275   0.540  EX/ALU/adder_32bits_ALU/mux_adder_inst4/co27 (EX/ALU/adder_32bits_ALU/cio<4>)
+     LUT4:I2->O            1   0.275   0.349  EX/ALU/Result<0>277 (EX/ALU/Result<0>_map65)
+     LUT4:I2->O            2   0.275   0.378  EX/ALU/Result<0>342 (ALUResult_0_OBUF)
+     OBUF:I->O                 2.592          ALUResult_0_OBUF (ALUResult<0>)
+    ----------------------------------------
+    Total                     13.786ns (7.843ns logic, 5.943ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+CPU : 44.30 / 44.50 s | Elapsed : 44.00 / 45.00 s
+ 
+--> 
+
+Total memory usage is 255304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  232 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

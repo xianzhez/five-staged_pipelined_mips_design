@@ -1,0 +1,156 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\wst\lab28\recycle\ID
+T_opt
+Z1 VNMm<YCSMUl7]f;H[OV<Gd1
+Z2 04 8 4 work ALU_tb_v fast 0
+Z3 =1-3859f957af57-52b4733b-cf-1a48
+Z4 o-quiet -auto_acc_if_foreign -work ALU +acc
+Z5 n@_opt
+Z6 OE;O;6.5;42
+T_opt1
+Z7 VcKY^oVLg[TX1zCbYmZN`R0
+R2
+Z8 =1-3859f957af57-52c03a88-2d0-1f8c
+R4
+Z9 n@_opt1
+R6
+vadder_32bits
+Z10 I[8RAfU2??9_P2zigA_?ao3
+Z11 VH3MfAaUBUHMniOHlZdcI;0
+Z12 dE:\31101008121220\lab28\PipelineCPU\SIM\ALU
+Z13 w1385559145
+Z14 8E:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+Z15 FE:/wst/lab28/PipelineCPU/SRC/adder_32bits.v
+L0 1
+Z16 OE;L;6.5;42
+r1
+31
+Z17 !s102 -nocovercells
+Z18 o-work ALU -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+Z19 !s100 E3lF8eVM4_168?e4[i>Xb2
+!s85 0
+vadder_4bits
+Z20 Ie0`:Eca1dFVMCiULhXOL]1
+Z21 VgZ^oLAGTcn2JM[I5V:91i3
+R12
+Z22 w1385176056
+Z23 8E:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+Z24 FE:/wst/lab28/PipelineCPU/SRC/adder_4bits.v
+L0 1
+R16
+r1
+31
+R17
+R18
+Z25 !s100 8[ed>GL9m_M_6Q=K`]FY03
+!s85 0
+vALU
+Z26 IR9[]U7=nKUIBgBAFK4L;23
+Z27 VaV^i_k8i[S<RQoIRA9CmA3
+R12
+Z28 w1387557678
+Z29 8E:/wst/lab28/PipelineCPU/SRC/ALU.v
+Z30 FE:/wst/lab28/PipelineCPU/SRC/ALU.v
+L0 15
+R16
+r1
+31
+R17
+R18
+Z31 n@a@l@u
+Z32 !s100 P:R]4NG;EgmM4Xh=2UOMa0
+!s85 0
+vALU_tb_v
+Z33 IE9D58fb:mfC5kSm=UBlRb0
+Z34 Vn8E^2mJkklB5[VY2iKST@2
+R12
+Z35 w1385171010
+Z36 8E:/wst/lab28/PipelineCPU/SIM/ALU/ALU_tb.v
+Z37 FE:/wst/lab28/PipelineCPU/SIM/ALU/ALU_tb.v
+L0 25
+R16
+r1
+31
+R17
+R18
+Z38 n@a@l@u_tb_v
+Z39 !s100 d6HGcGm_1<;nz`Aj`lzDE0
+!s85 0
+vdff
+Z40 IZPkgDg]ah>l@BSL5YI3o<1
+Z41 VQJf=onUaMX6VY4JoHzE;B2
+R12
+Z42 w1385171012
+Z43 8E:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+Z44 FE:/wst/lab28/PipelineCPU/SRC/ff_lib.v
+L0 4
+R16
+r1
+31
+R17
+R18
+Z45 !s100 RKg7^lDE^B`]29loMUBT<3
+!s85 0
+vdffr
+Z46 IPZZfGSzJ[2e@kh:U?GTgG0
+Z47 VTJ0dVO56HCY3EBFS?gH0;3
+R12
+R42
+R43
+R44
+L0 20
+R16
+r1
+31
+R17
+R18
+Z48 !s100 :U^LWl9ZH9jg?B[Fl1=Fo2
+!s85 0
+vdffre
+Z49 I3@ZCTJJ98N9TLb9FB0h=f2
+Z50 V7ZQ^8ZXQf6:_SW]:fGY<B2
+R12
+R42
+R43
+R44
+L0 42
+R16
+r1
+31
+R17
+R18
+Z51 !s100 4n>@7Ibl7V7FZjH[X9Hnz0
+!s85 0
+vfull_adder
+Z52 IUDaQ^b]DQG0T13_O@Bi[_0
+Z53 VNMW:TCXRdHao]1I3[6Q_<0
+R12
+Z54 w1385174200
+Z55 8E:/wst/lab28/PipelineCPU/SRC/full_adder.v
+Z56 FE:/wst/lab28/PipelineCPU/SRC/full_adder.v
+L0 1
+R16
+r1
+31
+R17
+R18
+Z57 !s100 Q3Of2g:>[DPLJ=4YfNRd=3
+!s85 0
+vmux_adder
+Z58 I=R2BSEoho3z@BE[5_j:HL2
+Z59 VHA=<^HM[?BnD;DNFC1EaP3
+R12
+Z60 w1385178494
+Z61 8E:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+Z62 FE:/wst/lab28/PipelineCPU/SRC/mux_adder.v
+L0 1
+R16
+r1
+31
+R17
+R18
+Z63 !s100 ^^:]ma<3>RoC^Y3ZBAhoV0
+!s85 0
